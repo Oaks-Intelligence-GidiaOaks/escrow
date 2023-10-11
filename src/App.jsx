@@ -1,13 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ContacPage from "./page/ContacPage";
+import { BrowserRouter as Router } from "react-router-dom";
+import RouterConfig from "./routes/routeConfig";
 
 function App() {
   return (
     <>
       <Router>
-        <Routes>
-          <Route path="/contact" element={<ContacPage />} />
-        </Routes>
+        <RouterConfig />
       </Router>
     </>
   );
