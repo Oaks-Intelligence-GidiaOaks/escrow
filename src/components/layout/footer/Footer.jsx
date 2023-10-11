@@ -1,4 +1,4 @@
-import { logo } from "../../../assets";
+import { logo, facebook, twitter, linkedln } from "../../../assets";
 import Container from "../container/Container";
 
 function Footer() {
