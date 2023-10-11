@@ -74,7 +74,7 @@ button:focus-visible {
 /* footer component */
 .footer {
   /* max-width: 1440px; */
-  max-height: 457px;
+  /* max-height: 457px; */
   background: #020724;
 }
 .footer-header {
@@ -85,9 +85,36 @@ button:focus-visible {
   font-weight: 500;
   line-height: normal;
 }
-.footer-quote {
+.footer-quote,
+.footer-quote:hover {
   padding: 16px 32px;
   border-radius: 16px;
   background: #3c88e7;
   color: #ffffff;
+}
+.footer-head {
+  color: #f6f6f7;
+  font-family: Satoshi;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+.footer-links,
+.footer-links:hover {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.copyright {
+  color: #4e4e4e;
+  text-align: right;
+  font-family: Satoshi;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
 }
