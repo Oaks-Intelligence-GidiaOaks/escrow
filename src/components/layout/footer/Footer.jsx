@@ -86,7 +86,7 @@ function Footer() {
               <img src={twitter} alt="twitter link" className="py-3 px-3" />
               <img src={linkedln} alt="linkedln link" className="px-3" />
             </div>
-            <div className="copyright">©2023 Escrow-Tech Limited</div>
+            <div className="copyright">©2023 Escrow-Tech Limited dd</div>
           </div>
         </Container>
       </section>
