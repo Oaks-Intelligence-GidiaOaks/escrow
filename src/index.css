@@ -159,3 +159,69 @@ button:focus-visible {
   font-weight: 400;
   line-height: normal;
 }
+.card-form-head {
+  font-family: Satoshi;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card-form-title {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contact-form-label {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contact-form-input {
+  padding: 12px 16px;
+  align-items: center;
+  border-radius: 8px;
+  border-bottom: 1px solid #7c8ba8;
+  background: #070c28;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #c4cad6;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.contact-form-textarea {
+  height: 219px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-bottom: 1px solid #7c8ba8;
+  background: #070c28;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #c4cad6;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.contact-form-submit-btn {
+  padding: 16px 32px;
+  border-radius: 16px;
+  background: #6306b2;
+  color: #fff;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
