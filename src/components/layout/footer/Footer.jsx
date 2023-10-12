@@ -5,7 +5,7 @@ import Container from "../container/Container";
 function Footer() {
   return (
     <>
-      <section className="footer">
+      <section className="footer pt-5">
         <Container>
           <div className="grid grid-flow-row md:grid-flow-col grid-cols-1 md:grid-cols-12 justify-center pt-10 pb-6 gap-y-4">
             <div className="text-center py-2 col-span-12 md:col-span-3 md:text-left">

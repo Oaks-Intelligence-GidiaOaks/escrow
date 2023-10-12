@@ -5,7 +5,7 @@ import Container from "../components/layout/container/Container";
 const ContacPage = () => {
   return (
     <>
-      <section className="contact-form-section">
+      <section className="contact-form-section py-5">
         <Container>
           <div className="grid grid-flow-row md:grid-flow-col grid-cols-1 md:grid-cols-12 justify-center pt-10 pb-10 gap-y-4 gap-x-5">
             <div className="py-2 col-span-12 md:col-span-6 lg:col-span-7">
