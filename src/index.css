@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Regular.woff2"),
+    url("./assets/fonts/Satoshi-Regular.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
