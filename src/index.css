@@ -322,3 +322,73 @@ button:focus-visible {
   font-weight: 400;
   line-height: normal;
 }
+.services-card-box {
+  max-width: 601.629px;
+  height: 409.271px;
+  padding: 44.218px 23.313px 43.28px 44.217px;
+  border-radius: 24.556px;
+  border: 1.023px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(0deg, #0e1330 0%, #0e1330 100%), #1d1c20;
+}
+.services-card-image {
+  fill: linear-gradient(0deg, #0e1330 0%, #0e1330 100%), #1d1c20;
+  stroke-width: 1.023px;
+  stroke: #282d45;
+}
+.services-expertise {
+  font-family: Satoshi;
+  font-size: 49.985px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.services-title {
+  font-family: Satoshi;
+  font-size: 23.07px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 29.991px */
+  letter-spacing: -0.692px;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.services-text {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 15.38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.rounded-card {
+  display: flex;
+  height: 53.205px;
+  padding: 15.38px 144.871px 14.755px 24.035px;
+  align-items: center;
+  border-radius: 24.556px;
+  border: 1.023px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(0deg, #0e1330 0%, #0e1330 100%), #1d1c20;
+  box-shadow: 0px 7.69006px 13.4576px 0px rgba(0, 0, 0, 0.25);
+}
+.code-text {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 15.38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.services-card-block {
+  border-radius: 22px;
+  border: 1.5px solid #282d45;
+  background: #080d2a;
+  max-width: 1280px;
+  height: 450px;
+  flex-shrink: 0;
+}
