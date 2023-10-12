@@ -118,3 +118,44 @@ button:focus-visible {
   font-weight: 500;
   line-height: 14px;
 }
+.contact-form-section {
+  background: #060b27;
+}
+.form-box {
+  border-radius: 22px;
+  border: 1px solid #282d45;
+  background: #0e1330;
+  max-width: 786px;
+  padding: 52px 32px;
+  align-items: center;
+}
+.card-contact {
+  border-radius: 22px;
+  border: 1px solid #282d45;
+  background: #0e1330;
+  padding: 32px;
+}
+.contact-card-icon {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.32);
+}
+.contact-card-icon-head {
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact-card-icon-title {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
