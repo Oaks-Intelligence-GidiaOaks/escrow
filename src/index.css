@@ -379,16 +379,56 @@ button:focus-visible {
 .code-text {
   color: #c4cad6;
   font-family: Satoshi;
-  font-size: 15.38px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+
 .services-card-block {
   border-radius: 22px;
   border: 1.5px solid #282d45;
   background: #080d2a;
+  width: 100%;
   max-width: 1280px;
-  height: 450px;
-  flex-shrink: 0;
+  padding: 10px; /* Increased default padding */
+  word-wrap: break-word; /* Ensure words break if needed */
+}
+
+@media (min-width: 768px) {
+  .services-card-block {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-card-block {
+    padding: 20px;
+  }
+}
+
+.text-box {
+  flex-shrink: 0.1;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.services-box-head {
+  font-family: Satoshi;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.services-box-text {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
