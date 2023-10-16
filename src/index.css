@@ -432,3 +432,146 @@ button:focus-visible {
   font-weight: 400;
   line-height: normal;
 }
+.landing-page-sections {
+  background: #060b27;
+}
+.landing-page-products {
+  font-family: Satoshi;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.landing-page-product-card {
+  height: 100%;
+  max-height: 506px;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1.5px solid #282d45;
+  background: rgba(14, 19, 48, 0.3);
+}
+.img-product-head {
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: #f6f6f7;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.img-product-title {
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.img-product-text {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-self: stretch;
+}
+.portfolio-btn {
+  padding: 16px 32px;
+  border-radius: 16px;
+  border: 1px solid #5c00e7;
+  color: #fff;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: #020724;
+}
+.technology {
+  font-family: Satoshi;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.technology-title {
+  color: #c4cad6;
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.tecknology-btn-1,
+.tecknology-btn-2 {
+  padding: 16px 32px;
+  border-radius: 16px;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.tecknology-btn-1 {
+  background: #5c00e7;
+  color: #fff;
+}
+
+.tecknology-btn-2 {
+  border: 1px solid #5c00e7;
+  color: #fff;
+  background-color: #020724;
+}
+
+/* Adjustments for small screens */
+@media screen and (max-width: 640px) {
+  .tecknology-btn-1,
+  .tecknology-btn-2 {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
+.landing-page-services-card {
+  padding: 28px;
+  border-radius: 32px;
+  border: 1px solid #282d45;
+  background: rgba(14, 19, 48, 0.3);
+}
+.img-services-text {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 100%;
+  max-height: 378.588px;
+}
+.services-title {
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.72px;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
