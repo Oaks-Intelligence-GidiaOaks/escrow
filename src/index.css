@@ -577,3 +577,182 @@ button:focus-visible {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.browse-section-card {
+  width: 100%;
+  max-width: 1280px;
+  padding: 52px;
+  border-radius: 32px;
+  border: 1px solid #282d45;
+  background: #0e1330;
+}
+.browse-heading {
+  font-family: Satoshi;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.browse-subtitle {
+  color: #8f9bb7;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.browse-col-1 {
+  width: 100%;
+  max-width: 572px;
+}
+.browse-col-1-btn {
+  padding: 16px 32px;
+  border-radius: 16px;
+  border: 1px solid #5c00e7;
+  background: #0e1330;
+  color: #fff;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.browse-col-box-3 {
+  width: 100%;
+  max-width: 572px;
+  height: 100%;
+  max-height: 363px;
+  padding: 28px 28px 0px 28px;
+  border-radius: 16px;
+  border: 1px solid #282d45;
+  background: #060b27;
+}
+.browse-col-head {
+  color: #f6f6f7;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.72px;
+}
+.browse-col-text {
+  color: #8f9bb7;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.browse-box {
+  border-radius: 10px 10px 0px 0px;
+  background: #0e1330;
+  width: 100%;
+  max-width: 417px;
+  height: 100%;
+  max-height: 217px;
+}
+.vision-heading {
+  font-family: Satoshi;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.vision-subtitle {
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.vision-lead {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.global-head {
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.global-heading {
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.global-subtitle {
+  color: #8f9bb7;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.globe {
+  height: 100%;
+  max-height: 654px;
+}
+.mission-section-card {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  padding: 52px;
+  border-radius: 60px;
+  background: #0e1330;
+}
+.mission-head {
+  font-family: Satoshi;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.mission-subtitle {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 27px */
+}
+
+@media (max-width: 640px) {
+  .mission-section-card {
+    background-image: none !important;
+  }
+}

@@ -1,5 +1,21 @@
 import { Footer } from "../components";
-import { product_1, product_2, product_3, dashboard } from "../assets";
+import {
+  product_1,
+  product_2,
+  product_3,
+  dashboard,
+  browse_img_1,
+  browse_img_2,
+  browse_img_3,
+  vision_img,
+  mark,
+  globe,
+  mission,
+  mission_1,
+  mission_2,
+  mission_3,
+  sky,
+} from "../assets";
 import Container from "../components/layout/container/Container";
 import Carousel from "../components/layout/carousel/Carousel";
 
@@ -92,9 +108,179 @@ const LandingPage = () => {
         <Container>
           <p className="landing-page-products pb-10 pt-24">Our Services</p>
           <Carousel />
+          <div className="flex justify-center items-center py-10">
+            <div className="browse-section-card">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-5">
+                <div className="browse-col-1">
+                  <p className="browse-heading pb-5">
+                    Using Technology to Foster Sustainability
+                  </p>
+                  <p className="browse-subtitle pb-8 text-base md:text-sm sm:text-xs">
+                    Leveraging the power of technology to drive sustainable
+                    change. Our commitment to a greener future is embodied in
+                    our flagship products, each meticulously designed to address
+                    pressing environmental challenges. Join us in shaping a more
+                    sustainable world through the seamless integration of
+                    technology and environmental stewardship.
+                  </p>
+                  <button className="browse-col-1-btn">Browse Products</button>
+                </div>
+                <div className="browse-col-2">
+                  <img src={browse_img_1} alt="" />
+                </div>
+                <div className="browse-col-3">
+                  <div className="browse-col-box-3">
+                    <p className="browse-col-head pb-4">
+                      Stable Products You Can Trust
+                    </p>
+                    <p className="browse-col-text pb-5">
+                      Gonsectetur eque nec nunc facilisis tellus tincidunt.
+                      Malesuada maecenas ac bibendum consectetur.
+                    </p>
+                    <div className="flex justify-center items-center">
+                      <div className="browse-box">
+                        <img
+                          src={browse_img_2}
+                          alt=""
+                          className="broswe-img p-2"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="browse-col-4">
+                  <div className="browse-col-box-3">
+                    <p className="browse-col-head pb-4">
+                      Fulfill Your Corporate Responsibility
+                    </p>
+                    <p className="browse-col-text pb-5">
+                      Honsectetur eque nec nunc facilisis tellus tincidunt.
+                      Malesuada maecenas ac bibendum consectetur.
+                    </p>
+                    <div className="flex justify-center items-center">
+                      <img src={browse_img_3} alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="py-12">
+            <div className="flex justify-center items-center py-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5">
+                <div className="vision-col-1">
+                  <p className="vision-heading pb-8">What Makes us Stand Out</p>
+                  <div className="flex pb-3 text-base md:text-sm sm:text-xs">
+                    <img src={mark} className="me-2" alt="" />
+                    <p className="vision-subtitle">Creativity</p>
+                  </div>
+                  <p className="vision-lead pb-8">
+                    Our experienced team of experts brings divers skills and
+                    knowledge to the table, allowing us to tackle complex
+                    challenges across a wide range of industries.
+                  </p>
+
+                  <div className="flex pb-3 text-base md:text-sm sm:text-xs">
+                    <img src={mark} className="me-2" alt="" />
+                    <p className="vision-subtitle">Security</p>
+                  </div>
+                  <p className="vision-lead pb-8">
+                    We understand the importance of security and
+                    confidentiality, and we have robust systems in place to
+                    ensure that our clients’ data and information are protected
+                    at all times.
+                  </p>
+
+                  <div className="flex pb-3 text-base md:text-sm sm:text-xs">
+                    <img src={mark} className="me-2" alt="" />
+                    <p className="vision-subtitle">Sustainability</p>
+                  </div>
+                  <p className="vision-lead">
+                    Our Commitment to sustainability and social responsibility
+                    sets us apart from other Tech Companies.We strive to use
+                    technology ro make a positive impact on society and the
+                    environment, and we hold ourselves to high ethical standards
+                    in all that we do.
+                  </p>
+                </div>
+                <div className="vision-col-2">
+                  <div className="flex justify-center items-center">
+                    <img src={vision_img} alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="global py-12">
+            <p className="global-head pb-3">ABOUT OUR PRODUCTS</p>
+            <p className="global-heading pb-3">
+              Digital Solutions for Global <br /> Sustainability Challenges
+            </p>
+            <p className="global-subtitle text-base md:text-sm sm:text-xs">
+              By harnessing cutting-edge technology and forward-thinking
+              strategies, our digital offerings empower individuals and <br />
+              organizations to actively engage with and contribute to the
+              achievement of comprehensive sustainability goals.
+            </p>
+          </div>
         </Container>
       </section>
 
+      <section className="landing-page-sections flex justify-center items-center ">
+        <img src={globe} alt="" className="w-full globe" />
+      </section>
+
+      <section className="landing-page-sections pb-10">
+        <Container>
+          <div className="flex justify-center items-center py-10">
+            <div
+              className="mission-section-card flex flex-col items-center" // Flex properties added here
+              style={{
+                backgroundImage: `url(${sky})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+              }}
+            >
+              <p className="mission-head pb-10 pt-5 text-center">Our Mission</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-6 md:p-3 lg:p-5">
+                <div className="mission-col-1">
+                  <img src={mission_1} alt="" className="pb-5" />
+                  <p className="mission-subtitle text-base md:text-sm sm:text-xs">
+                    We believe that technology can be a force for good. We are
+                    driven by our desire to use innovative digital tools like
+                    AI, deep learning, NLP, and image recognition to touch lives
+                    and reduce inequality in communities worldwide.
+                  </p>
+                </div>
+                <div className="mission-col-2">
+                  <img src={mission_2} alt="" className="pb-5" />
+                  <p className="mission-subtitle text-base md:text-sm sm:text-xs">
+                    Our mission is simple: Technology Touching Lives. We strive
+                    to generate prosperity for people everywhere, and we know
+                    that every little act of kindness can make a significant
+                    impact on society. That's why we're committed to building a
+                    better world through technology, one solution at a time.
+                  </p>
+                </div>
+                <div className="mission-col-3">
+                  <img src={mission_3} alt="" className="pb-5" />
+                  <p className="mission-subtitle text-base md:text-sm sm:text-xs">
+                    Escrow-Tech envisions a world where technology serves as a
+                    force for good, not just a tool. We invite you to join us in
+                    this endeavor and be a part of something truly special.
+                    Whether you're a client, a partner, or someone who shares
+                    our vision, we welcome you to the Escrow-Tech family.
+                    Together, let's make a difference and create a better future
+                    for all.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
       <Footer />
     </>
   );
