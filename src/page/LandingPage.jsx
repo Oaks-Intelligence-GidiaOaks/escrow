@@ -90,8 +90,8 @@ const LandingPage = () => {
         </Container>
 
         <Container>
-          <p className="landing-page-products pb-5 pt-24">Our Services</p>
-          {/* <Carousel /> */}
+          <p className="landing-page-products pb-10 pt-24">Our Services</p>
+          <Carousel />
         </Container>
       </section>
 

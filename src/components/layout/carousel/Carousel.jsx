@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { services_card_1, services_card_2 } from "../../../assets";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -40,48 +41,56 @@ function Carousel() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative w-full pb-12">
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2"
+        className="absolute top-1/2 left-0 z-10 tecknology-btn-2"
       >
-        Prev
+        <FaArrowLeft />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2"
+        className="absolute top-1/2 right-0 z-10 tecknology-btn-2"
       >
-        Next
+        <FaArrowRight />
       </button>
 
-      <div className="grid grid-flow-row md:grid-flow-col grid-cols-1 md:grid-cols-12 justify-center gap-y-3 gap-x-5 py-5 pb-">
-        {cards.map((card, idx) => (
-          <div
-            key={idx}
-            className={`col-span-12 md:col-span-6 lg:col-span-6 landing-page-services-card transition-opacity duration-300 ${
-              activeIndex === idx ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className="img-product pb-3">
-              <img src={card.image} alt={card.title} />
+      <div className="overflow-hidden w-full">
+        <div
+          className="flex transition-transform duration-500"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        >
+          {cards.map((card, idx) => (
+            <div
+              key={idx}
+              className="w-full flex-none flex justify-center items-center"
+            >
+              <div className="landing-page-services-card">
+                <div className="img-product">
+                  <img src={card.image} alt={card.title} />
+                </div>
+                <p className="services-title pt-3">{card.title}</p>
+                <div className="img-text pt-4">
+                  <p className="img-services-text">{card.text}</p>
+                </div>
+              </div>
             </div>
-            <p className="services-title">{card.title}</p>
-            <div className="img-text pb-2">
-              <p className="img-services-text pt-4 text-base md:text-sm sm:text-xs">
-                {card.text}
-              </p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      <div className="flex justify-center space-x-2 mt-4">
+      <div className="flex justify-center space-x-2 pt-6">
         {cards.map((_, idx) => (
           <div
             key={idx}
-            className={`h-3 w-3 rounded-full ${
-              activeIndex === idx ? "bg-blue-500" : "bg-gray-300"
+            className={`h-2 w-6 rounded-md ${
+              activeIndex === idx ? "bg-active" : "bg-inactive"
             }`}
+            style={{
+              backgroundColor: activeIndex === idx ? "#AA00FA" : "#282D45",
+              cursor: "pointer",
+            }}
+            onClick={() => setActiveIndex(idx)}
           ></div>
         ))}
       </div>

@@ -548,6 +548,8 @@ button:focus-visible {
   }
 }
 .landing-page-services-card {
+  width: 100%;
+  max-width: 624px;
   padding: 28px;
   border-radius: 32px;
   border: 1px solid #282d45;
