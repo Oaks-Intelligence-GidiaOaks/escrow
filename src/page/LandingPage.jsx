@@ -244,7 +244,7 @@ const LandingPage = () => {
               }}
             >
               <p className="mission-head pb-10 pt-5 text-center">Our Mission</p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-6 md:p-3 lg:p-5">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-6 md:p-2 lg:p-3">
                 <div className="mission-col-1">
                   <img src={mission_1} alt="" className="pb-5" />
                   <p className="mission-subtitle text-base md:text-sm sm:text-xs">
