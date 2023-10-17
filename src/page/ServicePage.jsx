@@ -1,4 +1,4 @@
-import { Footer } from "../components";
+import { Footer, Hero } from "../components";
 import {
   services_card_box_1,
   services_card_box_2,
@@ -15,12 +15,18 @@ import {
   software,
   advisory,
   consultancy,
+  servicehero,
 } from "../assets";
 import Container from "../components/layout/container/Container";
 
 function ServicePage() {
   return (
     <>
+      <Hero
+        title="Our Services"
+        text="Elevate your business to the next level with Escrow-Tech's forward-thinking technologies."
+        image={servicehero}
+      />
       <section className="contact-form-section py-10">
         <Container>
           <div className="grid justify-items-center pb-10 mb-5 py-3">

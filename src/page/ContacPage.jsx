@@ -1,10 +1,15 @@
-import { Footer } from "../components";
-import { cardIcon1, cardIcon2, cardIcon3 } from "../assets";
+import { Footer, Hero } from "../components";
+import { cardIcon1, cardIcon2, cardIcon3, contacthero } from "../assets";
 import Container from "../components/layout/container/Container";
 
 const ContacPage = () => {
   return (
     <>
+      <Hero
+        title="Contact"
+        text="Our team is always delighted to collaborate with businesses seeking innovative solutions to any problem"
+        image={contacthero}
+      />
       <section className="contact-form-section py-5">
         <Container>
           <div className="grid grid-flow-row md:grid-flow-col grid-cols-1 md:grid-cols-12 justify-center pt-10 pb-10 gap-y-4 gap-x-5">

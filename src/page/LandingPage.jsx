@@ -1,4 +1,3 @@
-import { Footer } from "../components";
 import {
   product_1,
   product_2,
@@ -10,19 +9,27 @@ import {
   vision_img,
   mark,
   globe,
-  mission,
+  // mission,
   mission_1,
   mission_2,
   mission_3,
   sky,
 } from "../assets";
+import { Footer, Hero } from "../components";
+// import { product_1, product_2, product_3, dashboard } from "../assets";
 import Container from "../components/layout/container/Container";
 import Carousel from "../components/layout/carousel/Carousel";
+import { hero } from "../assets";
 
 const LandingPage = () => {
   return (
     <>
       <section className="landing-page-sections">
+        <Hero
+          title="Simple Solutions to Sustainability"
+          text="Experience innovation like never before with out cutting edge technologies."
+          image={hero}
+        />
         <Container>
           <p className="landing-page-products pb-5">Our Products</p>
           <div className="grid grid-flow-row md:grid-flow-col grid-cols-1 md:grid-cols-12 justify-center gap-y-3 gap-x-5 py-5 pb-">

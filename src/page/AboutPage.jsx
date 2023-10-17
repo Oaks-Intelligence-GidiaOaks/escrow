@@ -7,12 +7,19 @@ import {
   research_big,
   next_big,
   logo_black_big,
+  abouthero,
 } from "../assets";
+import { Hero } from "../components";
 import Container from "../components/layout/container/Container";
 
 const AboutPage = () => {
   return (
     <>
+      <Hero
+        title="About Us"
+        text="We provide personalized experiences and customised solutions."
+        image={abouthero}
+      />
       <section className="contact-form-section py-10">
         <Container>
           <div className="grid justify-items-center mb-5 pt-5">

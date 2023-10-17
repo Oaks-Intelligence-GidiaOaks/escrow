@@ -1,7 +1,11 @@
-import React from "react";
+import { Hero } from "../../components";
 
 const LandingBlock = () => {
-  return <div>LandingBlock</div>;
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
 };
 
 export default LandingBlock;
