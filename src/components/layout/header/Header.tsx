@@ -1,5 +1,5 @@
 import React from "react";
-import "./header.css"
+import "./header.css";
 import { Link } from "react-router-dom";
 import { logo, moon } from "../../../assets";
 
@@ -25,7 +25,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="btn">
-        <img src={moon} alt="" className="btn_img"/>
+        <img src={moon} alt="" className="btn_img" />
         <div className="btn_text">Dark</div>
       </div>
     </div>

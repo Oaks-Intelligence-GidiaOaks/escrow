@@ -760,3 +760,9 @@ button:focus-visible {
     background-image: none !important;
   }
 }
+@media (max-width: 640px) {
+  .technology,
+  .browse-heading {
+    font-size: 2rem;
+  }
+}

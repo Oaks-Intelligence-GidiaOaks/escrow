@@ -87,9 +87,9 @@ const LandingPage = () => {
 
         <Container>
           <div className="flex justify-center items-center pb-5 pt-6">
-            <h className="technology text-center xs:text-sm">
+            <h5 className="technology text-center text-base xs:text-sm sm:text-base">
               Using Technology to Foster Sustainability
-            </h>
+            </h5>
           </div>
           <p className="technology-title justify-center text-base md:text-sm sm:text-xs">
             Discover our range of products addressing sustainability challenges,
@@ -119,7 +119,7 @@ const LandingPage = () => {
             <div className="browse-section-card">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-5">
                 <div className="browse-col-1">
-                  <p className="browse-heading pb-5">
+                  <p className="browse-heading pb-5 ">
                     Using Technology to Foster Sustainability
                   </p>
                   <p className="browse-subtitle pb-8 text-base md:text-sm sm:text-xs">

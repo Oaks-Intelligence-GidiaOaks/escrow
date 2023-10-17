@@ -15,7 +15,7 @@ function Footer() {
                 className="pb-2 mx-auto block md:mx-0 md:inline"
               />
               <p className="footer-header pb-8 mb-5">Escrow-Tech</p>
-              <a href="#" className="btn footer-quote mb-5">
+              <a href="#" className="footer-quote mb-5">
                 Get a quote
               </a>
             </div>
