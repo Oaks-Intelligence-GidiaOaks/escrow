@@ -24,7 +24,7 @@ import { hero } from "../assets";
 const LandingPage = () => {
   return (
     <>
-      <section className="landing-page-sections">
+      <section className="landing-page-sections ">
         <Hero
           title="Simple Solutions to Sustainability"
           text="Experience innovation like never before with out cutting edge technologies."
@@ -87,7 +87,7 @@ const LandingPage = () => {
 
         <Container>
           <div className="flex justify-center items-center pb-5 pt-6">
-            <h5 className="technology text-center text-base xs:text-sm sm:text-base">
+            <h5 className="technology text-center">
               Using Technology to Foster Sustainability
             </h5>
           </div>
