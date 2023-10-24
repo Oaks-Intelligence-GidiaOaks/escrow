@@ -38,7 +38,15 @@
   padding-bottom: 10px;
 }
 .title {
-  font-size: 25px;
+  font-family: Open Sans;
+  font-size: 24.84px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 991px) {

@@ -771,7 +771,16 @@ button:focus-visible {
 }
 @media (max-width: 640px) {
   .technology,
-  .browse-heading {
+  .browse-heading,
+  .global-heading {
     font-size: 2rem;
   }
+}
+.text-hero {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
