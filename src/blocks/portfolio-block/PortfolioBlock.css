@@ -1,0 +1,36 @@
+.borderb {
+  border-bottom: 3px solid #5c00e7;
+  border-radius: 3px;
+}
+.anim {
+  width: 500px;
+  height: 400px;
+}
+.anim_wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.arrow_wrap {
+  border-radius: 8px;
+  border: 1.5px solid #282d45;
+  background: #0e1330;
+  padding: 10px;
+  margin-left: 14px;
+  cursor: pointer;
+}
+.arrow_wrap_con {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.port_block_wrap {
+  background: #060b27;
+}
+
+@media (max-width: 991px) {
+  .anim {
+    width: 200px;
+  }
+}

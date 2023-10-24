@@ -18,11 +18,11 @@ const Hero = ({
       <Container>
         <Header />
         <div className="w-full flex flex-wrap">
-          <div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
+          <div className="w-full lg:w-[40%] flex flex-col justify-center items-start">
             <div className="lg:text-[50px] text-[35px] text-gradient leading-[120%] font-black mb-[16px] text-left w-full hero_text">
               {title}
             </div>
-            <div className="w-full mb-[16px] lg:text-[24px] text-[20px]">{text}</div>
+            <div className="w-full max-w-[400px] text-left mb-[16px] lg:text-[24px] text-[20px]">{text}</div>
             {urlPath === "/" && (
               <div className="w-full flex justify-start items-center gap-x-6 text-center py-8">
                 <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
@@ -34,7 +34,7 @@ const Hero = ({
               </div>
             )}
           </div>
-          <div className="w-full lg:w-1/2 flex justify-center items-center ">
+          <div className="w-full lg:w-[60%] flex justify-center items-center ">
             {Image || <img src={image} className="floating-image w-[85%]" />}
           </div>
         </div>
