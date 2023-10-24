@@ -12,7 +12,7 @@ import Lottie from "lottie-react";
 import groovyWalkAnimation from "../../assets/images/groovyWalkAnimation.json";
 
 const PortfolioBlock = () => {
-  const [index, setIndex] = useState();
+  const [index, setIndex] = useState(0);
   const tabs = ["Carbonible", "Carbon-Adjust", "Carbosense"];
   const Component = {
     0: <PortfolioCarbonible />,
