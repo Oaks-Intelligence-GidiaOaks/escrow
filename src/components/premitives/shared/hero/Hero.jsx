@@ -34,7 +34,7 @@ const Hero = ({ title, text, image = "", imageComponent: Image }) => {
             )}
           </div>
           <div className="w-full lg:w-[60%] flex justify-center items-center ">
-            {Image || <img src={image} className="floating-image w-[85%]" />}
+            {Image || <img src={image} className=" w-[85%]" />}
           </div>
         </div>
         {urlPath === "/" && (
