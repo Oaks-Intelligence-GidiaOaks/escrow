@@ -21,6 +21,7 @@ import {
   browse_img_1_light,
   browse_img_2_light,
   browse_img_3_light,
+  hero_light,
 } from "../assets";
 import { Footer, Hero } from "../components";
 // import { product_1, product_2, product_3, dashboard } from "../assets";
@@ -37,7 +38,7 @@ const LandingPage = () => {
         <Hero
           title="Simple Solutions to Sustainability"
           text="Experience innovation like never before with out cutting edge technologies."
-          image={hero}
+          image={isDarkMode ? hero : hero_light}
         />
         <Container>
           <p className="landing-page-products pb-5 pt-10">Our Products</p>
@@ -211,7 +212,7 @@ const LandingPage = () => {
                       <img
                         src={isDarkMode ? browse_img_3 : browse_img_3_light}
                         alt=""
-                        className="pt-10"
+                        className="pt-8"
                       />
                     </div>
                   </div>

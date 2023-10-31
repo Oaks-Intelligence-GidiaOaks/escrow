@@ -84,7 +84,7 @@ button:focus-visible {
 }
 
 .hero {
-  background: #fff;
+  background: #f7f9f9;
 }
 .hero_text {
   background: #232323;
@@ -227,20 +227,20 @@ button:focus-visible {
   line-height: 14px;
 }
 .contact-form-section {
-  background: #060b27;
+  background: #fff;
 }
 .form-box {
   border-radius: 22px;
-  border: 1px solid #282d45;
-  background: #0e1330;
+  border: 1px solid #dedede;
+  background: #fff;
   max-width: 786px;
   padding: 52px 32px;
   align-items: center;
 }
 .card-contact {
   border-radius: 22px;
-  border: 1px solid #282d45;
-  background: #0e1330;
+  border: 1px solid #dedede;
+  background: #fff;
   padding: 32px;
 }
 .contact-card-icon {
@@ -254,13 +254,13 @@ button:focus-visible {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: #4e4e4e;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .contact-card-icon-title {
-  color: #c4cad6;
+  color: #4e4e4e;
   font-family: Satoshi;
   font-size: 22px;
   font-style: normal;
@@ -273,13 +273,13 @@ button:focus-visible {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: #232323;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .card-form-title {
-  color: #c4cad6;
+  color: #4e4e4e;
   font-family: Satoshi;
   font-size: 24px;
   font-style: normal;
@@ -287,7 +287,7 @@ button:focus-visible {
   line-height: normal;
 }
 .contact-form-label {
-  color: #c4cad6;
+  color: #4e4e4e;
   font-family: Satoshi;
   font-size: 24px;
   font-style: normal;
@@ -299,9 +299,9 @@ button:focus-visible {
   align-items: center;
   border-radius: 8px;
   border-bottom: 1px solid #7c8ba8;
-  background: #070c28;
+  background: #f6f6f7;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  color: #c4cad6;
+  color: #4e4e4e;
   font-family: Open Sans;
   font-size: 16px;
   font-style: normal;
@@ -313,9 +313,9 @@ button:focus-visible {
   padding: 12px 16px;
   border-radius: 8px;
   border-bottom: 1px solid #7c8ba8;
-  background: #070c28;
+  background: #f6f6f7;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  color: #c4cad6;
+  color: #4e4e4e;
   font-family: Open Sans;
   font-size: 16px;
   font-style: normal;
@@ -336,8 +336,8 @@ button:focus-visible {
 .about-card-block {
   padding: 16px 32px;
   border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0e1330;
+  border: 1px solid #dedede;
+  background: #fff;
   max-width: 964px;
   position: relative;
 }
@@ -366,8 +366,8 @@ button:focus-visible {
 .about-card-1-block {
   padding: 16px 32px;
   border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0e1330;
+  border: 1px solid #dedede;
+  background: #fff;
   max-width: 1280px;
   position: relative;
 }
@@ -403,7 +403,7 @@ button:focus-visible {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: #232323;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -415,13 +415,13 @@ button:focus-visible {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: #232323;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .about-card-text {
-  color: #c4cad6;
+  color: #4e4e4e;
   font-family: Satoshi;
   font-size: 16px;
   font-style: normal;
@@ -433,8 +433,8 @@ button:focus-visible {
   height: 409.271px;
   padding: 44.218px 23.313px 43.28px 44.217px;
   border-radius: 24.556px;
-  border: 1.023px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(0deg, #0e1330 0%, #0e1330 100%), #1d1c20;
+  border: 1px solid #dedede;
+  background: #fff;
 }
 .services-card-image {
   fill: linear-gradient(0deg, #0e1330 0%, #0e1330 100%), #1d1c20;
@@ -447,10 +447,7 @@ button:focus-visible {
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #232323;
 }
 .services-title {
   font-family: Satoshi;
@@ -465,7 +462,7 @@ button:focus-visible {
   -webkit-text-fill-color: transparent;
 }
 .services-text {
-  color: #c4cad6;
+  color: #4e4e4e;
   font-family: Satoshi;
   font-size: 15.38px;
   font-style: normal;
@@ -479,11 +476,11 @@ button:focus-visible {
   align-items: center;
   border-radius: 24.556px;
   border: 1.023px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(0deg, #0e1330 0%, #0e1330 100%), #1d1c20;
+  background: #fff;
   box-shadow: 0px 7.69006px 13.4576px 0px rgba(0, 0, 0, 0.25);
 }
 .code-text {
-  color: #c4cad6;
+  color: #4e4e4e;
   font-family: Satoshi;
   font-size: 14px;
   font-style: normal;
@@ -493,8 +490,8 @@ button:focus-visible {
 
 .services-card-block {
   border-radius: 22px;
-  border: 1.5px solid #282d45;
-  background: #080d2a;
+  border: 1.5px solid #dedede;
+  background: #fff;
   width: 100%;
   max-width: 1280px;
   padding: 10px; /* Increased default padding */
@@ -525,13 +522,10 @@ button:focus-visible {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #232323;
 }
 .services-box-text {
-  color: #c4cad6;
+  color: #4e4e4e;
   font-family: Satoshi;
   font-size: 16px;
   font-style: normal;
@@ -891,4 +885,7 @@ button:focus-visible {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.port_block_wrap {
+  background: #fff !important;
 }

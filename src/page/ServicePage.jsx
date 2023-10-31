@@ -5,6 +5,7 @@ import {
   services_card_box_3,
   services_card_box_4,
   code,
+  code_light,
   circle,
   rounded,
   services_step_1,
@@ -16,16 +17,28 @@ import {
   advisory,
   consultancy,
   servicehero,
+  servicehero_light,
+  services_step_1_light,
+  services_step_2_light,
+  services_step_3_light,
+  services_step_4_light,
+  services_card_box_1_light,
+  services_card_box_2_light,
+  services_card_box_3_light,
+  services_card_box_4_light,
 } from "../assets";
 import Container from "../components/layout/container/Container";
+import { useTheme } from "../theme/useTheme";
 
 function ServicePage() {
+  const { isDarkMode } = useTheme();
+
   return (
     <>
       <Hero
         title="Our Services"
         text="Elevate your business to the next level with Escrow-Tech's forward-thinking technologies."
-        image={servicehero}
+        image={isDarkMode ? servicehero : servicehero_light}
       />
       <section className="contact-form-section py-10">
         <Container>
@@ -63,7 +76,10 @@ function ServicePage() {
                       industries.
                     </p>
                   </div>
-                  <img src={software} className="ms-8 invisible lg:visible" />
+                  <img
+                    src={isDarkMode ? software : services_step_1_light}
+                    className="ms-8 invisible lg:visible"
+                  />
                 </div>
               </div>
             </div>
@@ -101,7 +117,10 @@ function ServicePage() {
                       <br /> enhanced reputation.
                     </p>
                   </div>
-                  <img src={advisory} className="ms-8 invisible lg:visible" />
+                  <img
+                    src={isDarkMode ? advisory : services_step_2_light}
+                    className="ms-8 invisible lg:visible"
+                  />
                 </div>
               </div>
             </div>
@@ -141,7 +160,7 @@ function ServicePage() {
                     </p>
                   </div>
                   <img
-                    src={research_card}
+                    src={isDarkMode ? research_card : services_step_3_light}
                     className="ms-8 invisible lg:visible"
                   />
                 </div>
@@ -183,7 +202,7 @@ function ServicePage() {
                     </p>
                   </div>
                   <img
-                    src={consultancy}
+                    src={isDarkMode ? consultancy : services_step_4_light}
                     className="ms-8 invisible lg:visible"
                   />
                 </div>
@@ -195,7 +214,9 @@ function ServicePage() {
             <div className="py-2 col-span-12 md:col-span-6 lg:col-span-6">
               <div className="services-card-box">
                 <img
-                  src={services_card_box_1}
+                  src={
+                    isDarkMode ? services_card_box_1 : services_card_box_1_light
+                  }
                   alt=""
                   className="services-card-image pb-3"
                 />
@@ -207,7 +228,11 @@ function ServicePage() {
                 </p>
 
                 <div className="rounded-card mt-3 invisible md:visible md:flex">
-                  <img src={code} alt="" className="me-3" />
+                  <img
+                    src={isDarkMode ? code : code_light}
+                    alt=""
+                    className="me-3"
+                  />
                   <p className="code-text">
                     Intelligent software capable of risk assessment
                   </p>
@@ -217,7 +242,9 @@ function ServicePage() {
             <div className="py-2 col-span-12 md:col-span-6 lg:col-span-6">
               <div className="services-card-box relative">
                 <img
-                  src={services_card_box_2}
+                  src={
+                    isDarkMode ? services_card_box_2 : services_card_box_2_light
+                  }
                   alt=""
                   className="services-card-image pb-3"
                 />
@@ -240,7 +267,9 @@ function ServicePage() {
             <div className="py-2 col-span-12 md:col-span-6 lg:col-span-6">
               <div className="services-card-box relative">
                 <img
-                  src={services_card_box_3}
+                  src={
+                    isDarkMode ? services_card_box_3 : services_card_box_3_light
+                  }
                   alt=""
                   className="services-card-image pb-3"
                 />
@@ -259,7 +288,9 @@ function ServicePage() {
             <div className="py-2 col-span-12 md:col-span-6 lg:col-span-6">
               <div className="services-card-box relative">
                 <img
-                  src={services_card_box_4}
+                  src={
+                    isDarkMode ? services_card_box_4 : services_card_box_4_light
+                  }
                   alt=""
                   className="services-card-image pb-3"
                 />

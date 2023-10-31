@@ -1,14 +1,26 @@
 import { Footer, Hero } from "../components";
-import { cardIcon1, cardIcon2, cardIcon3, contacthero } from "../assets";
+import {
+  cardIcon1,
+  cardIcon2,
+  cardIcon3,
+  contacthero,
+  contacthero_light,
+  cardIcon1_light,
+  cardIcon2_light,
+  cardIcon3_light,
+} from "../assets";
 import Container from "../components/layout/container/Container";
+import { useTheme } from "../theme/useTheme";
 
 const ContacPage = () => {
+  const { isDarkMode } = useTheme();
+
   return (
     <>
       <Hero
         title="Contact"
         text="Our team is always delighted to collaborate with businesses seeking innovative solutions to any problem"
-        image={contacthero}
+        image={isDarkMode ? contacthero : contacthero_light}
       />
       <section className="contact-form-section py-5">
         <Container>
@@ -82,7 +94,7 @@ const ContacPage = () => {
             <div className="py-2 col-span-12 md:col-span-3 lg:col-span-4">
               <div className="card-contact mb-5">
                 <img
-                  src={cardIcon1}
+                  src={isDarkMode ? cardIcon1 : cardIcon1_light}
                   alt="cardIcon1"
                   className="contact-card-icon"
                 />
@@ -93,7 +105,7 @@ const ContacPage = () => {
               </div>
               <div className="card-contact mb-5">
                 <img
-                  src={cardIcon2}
+                  src={isDarkMode ? cardIcon2 : cardIcon2_light}
                   alt="cardIcon1"
                   className="contact-card-icon"
                 />
@@ -106,7 +118,7 @@ const ContacPage = () => {
               </div>
               <div className="card-contact mb-5">
                 <img
-                  src={cardIcon3}
+                  src={isDarkMode ? cardIcon3 : cardIcon3_light}
                   alt="cardIcon1"
                   className="contact-card-icon"
                 />

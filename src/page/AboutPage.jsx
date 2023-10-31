@@ -8,17 +8,22 @@ import {
   next_big,
   logo_black_big,
   abouthero,
+  abouthero_light,
+  logo_black_big_light,
 } from "../assets";
 import { Hero } from "../components";
 import Container from "../components/layout/container/Container";
+import { useTheme } from "../theme/useTheme";
 
 const AboutPage = () => {
+  const { isDarkMode } = useTheme();
+
   return (
     <>
       <Hero
         title="About Us"
         text="We provide personalized experiences and customised solutions."
-        image={abouthero}
+        image={isDarkMode ? abouthero : abouthero_light}
       />
       <section className="contact-form-section py-10">
         <Container>
@@ -45,7 +50,10 @@ const AboutPage = () => {
                   we&apos;re here to help you achieve success.
                 </p>
                 <div className="absolute bottom-0 right-0">
-                  <img src={logo_black_big} alt="" />
+                  <img
+                    src={isDarkMode ? logo_black_big : logo_black_big_light}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>

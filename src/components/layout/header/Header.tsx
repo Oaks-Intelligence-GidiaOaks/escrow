@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   return (
-    <div className="flex justify-between items-center wraph">
+    <div className="flex justify-between items-center wraph pb-8">
       <div className="flex items-center">
         <img src={logo} alt="Logo" className="logo" />
         <div className="title title-light">Escrow-Tech</div>
