@@ -26,6 +26,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -176,12 +180,15 @@ button:focus-visible {
     width: 20px;
     height: 20px;
   }
+.bg {
+  background: linear-gradient(to right, #020724 25%, #250b4a 50%, #020724 70%);
 }
 
 /* footer component */
 .footer {
   background: linear-gradient(to right, #020724 25%, #250b4a 50%, #020724 70%);
 }
+
 .footer-header {
   color: #f6f6f7;
   font-family: Satoshi;

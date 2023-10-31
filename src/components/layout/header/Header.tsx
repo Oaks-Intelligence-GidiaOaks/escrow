@@ -3,28 +3,34 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { logo, moon, sun } from "../../../assets";
 import { useTheme } from "../../../theme/useTheme";
+import "./header.css";
+import { NavLink } from "react-router-dom";
+// import { logo, moon } from "../../../assets";
 
 const Header = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   return (
-    <div className="flex justify-between items-center pb-[45px]">
+    <div className="flex justify-between items-center wraph">
       <div className="flex items-center">
         <img src={logo} alt="Logo" className="logo" />
         <div className="title">Escrow-Tech</div>
       </div>
       <div className="flex w-2/5 justify-between links">
-        <Link to="/" className="text">
+        <NavLink to="/" className="text">
           Home
-        </Link>
-        <Link to="/about" className="text">
+        </NavLink>
+        <NavLink to="/about" className="text">
           About
-        </Link>
-        <Link to="/services" className="text">
+        </NavLink>
+        <NavLink to="/portfolio" className="text">
+          Portfolio
+        </NavLink>
+        <NavLink to="/services" className="text">
           Services
-        </Link>
-        <Link to="/contact" className="text">
+        </NavLink>
+        <NavLink to="/contact" className="text">
           Contact
-        </Link>
+        </NavLink>
       </div>
       <div className="btn" onClick={toggleTheme}>
         <img src={isDarkMode ? sun : moon} alt="" className="btn_img" />

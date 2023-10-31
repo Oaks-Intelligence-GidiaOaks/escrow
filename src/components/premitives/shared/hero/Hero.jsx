@@ -15,7 +15,7 @@ const Hero = ({ title, text, image = "", imageComponent: Image }) => {
       <Container>
         <Header />
         <div className="w-full flex flex-wrap">
-          <div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
+          <div className="w-full lg:w-[40%] flex flex-col justify-center items-start">
             <div className="lg:text-[50px] text-[35px] text-gradient leading-[120%] font-black mb-[16px] text-left w-full hero_text">
               {title}
             </div>
@@ -33,8 +33,8 @@ const Hero = ({ title, text, image = "", imageComponent: Image }) => {
               </div>
             )}
           </div>
-          <div className="w-full lg:w-1/2 flex justify-center items-center ">
-            {Image || <img src={image} className="floating-image w-[85%]" />}
+          <div className="w-full lg:w-[60%] flex justify-center items-center ">
+            {Image || <img src={image} className=" w-[85%]" />}
           </div>
         </div>
         {urlPath === "/" && (

@@ -34,7 +34,9 @@
 .logo {
   margin-right: 5px;
 }
-
+.wraph {
+  padding-bottom: 10px;
+}
 .title {
   font-family: Open Sans;
   font-size: 24.84px;
@@ -49,7 +51,17 @@
 
 @media (max-width: 991px) {
   .title {
-    font-size: 20px;
+    font-size: 14px;
+  }
+  .wraph {
+    padding-bottom: 70px;
+  }
+  .text {
+    display: none;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
   }
   .links {
     display: none;

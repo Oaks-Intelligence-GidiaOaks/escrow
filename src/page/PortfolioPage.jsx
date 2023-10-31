@@ -1,9 +1,11 @@
-import React from 'react'
+import { PortfolioBlock } from "../blocks";
 
 const PortfolioPage = () => {
   return (
-    <div>PortfolioPage</div>
-  )
-}
+    <>
+      <PortfolioBlock />
+    </>
+  );
+};
 
-export default PortfolioPage
+export default PortfolioPage;
