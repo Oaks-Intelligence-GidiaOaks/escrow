@@ -6,7 +6,8 @@ const ThemeProvider = ({ children }) => {
   const prefersDarkMode = window.matchMedia(
     "(prefers-color-scheme: dark)"
   ).matches;
-  const [isDarkMode, setDarkMode] = useState(!prefersDarkMode);
+  // const [isDarkMode, setDarkMode] = useState(!prefersDarkMode);
+  const [isDarkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const darkStyle = document.getElementById("dark-theme-style");
