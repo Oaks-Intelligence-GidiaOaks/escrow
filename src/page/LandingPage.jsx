@@ -97,7 +97,13 @@ const LandingPage = () => {
         </Container>
       </section>
 
-      <section className="technology-section pb-5 pt-5">
+      <section
+        className={
+          isDarkMode
+            ? "landing-page-sections pb-5 pt-5"
+            : "technology-section pb-5 pt-5"
+        }
+      >
         <Container>
           <div className="flex justify-center items-center pb-5 pt-6">
             <h5 className="technology text-center">
@@ -130,14 +136,22 @@ const LandingPage = () => {
         </Container>
       </section>
 
-      <section className="services-section pb-5">
+      <section
+        className={
+          isDarkMode ? "landing-page-sections pb-5" : "services-section pb-5"
+        }
+      >
         <Container>
           <p className="landing-page-products pb-10 pt-24">Our Services</p>
           <Carousel />
         </Container>
       </section>
 
-      <section className="browse-section pt-5">
+      <section
+        className={
+          isDarkMode ? "landing-page-sections pt-5" : "browse-section pt-5"
+        }
+      >
         <Container>
           <div className="flex justify-center items-center py-10">
             <div className="browse-section-card">

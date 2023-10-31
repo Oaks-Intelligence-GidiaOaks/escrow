@@ -6,12 +6,22 @@ const ThemeProvider = ({ children }) => {
   const prefersDarkMode = window.matchMedia(
     "(prefers-color-scheme: dark)"
   ).matches;
-  // const [isDarkMode, setDarkMode] = useState(!prefersDarkMode);
-  const [isDarkMode, setDarkMode] = useState(true);
+  const [isDarkMode, setDarkMode] = useState(true); // Initialize as true for dark mode
+  const [isStylesReady, setStylesReady] = useState(isDarkMode); // Styles are ready if isDarkMode is true
 
   useEffect(() => {
     const darkStyle = document.getElementById("dark-theme-style");
     const lightStyle = document.getElementById("light-theme-style");
+
+    // Function to set styles ready and remove listeners
+    const handleStylesReady = () => {
+      setStylesReady(true);
+      darkStyle.removeEventListener("load", handleStylesReady);
+      lightStyle.removeEventListener("load", handleStylesReady);
+    };
+
+    darkStyle.addEventListener("load", handleStylesReady);
+    lightStyle.addEventListener("load", handleStylesReady);
 
     if (isDarkMode) {
       darkStyle.removeAttribute("disabled");
@@ -34,7 +44,7 @@ const ThemeProvider = ({ children }) => {
     <ThemeContext.Provider
       value={{ isDarkMode, toggleTheme: () => setDarkMode(!isDarkMode) }}
     >
-      {children}
+      {isStylesReady ? children : null}
     </ThemeContext.Provider>
   );
 };
