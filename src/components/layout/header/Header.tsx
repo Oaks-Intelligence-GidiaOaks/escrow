@@ -1,9 +1,11 @@
 import React from "react";
-import "./header.css";
+// import "./header.css";
 import { Link } from "react-router-dom";
-import { logo, moon } from "../../../assets";
+import { logo, moon, sun } from "../../../assets";
+import { useTheme } from "../../../theme/useTheme";
 
 const Header = () => {
+  const { isDarkMode, toggleTheme } = useTheme();
   return (
     <div className="flex justify-between items-center pb-[45px]">
       <div className="flex items-center">
@@ -24,9 +26,9 @@ const Header = () => {
           Contact
         </Link>
       </div>
-      <div className="btn">
-        <img src={moon} alt="" className="btn_img" />
-        <div className="btn_text">Dark</div>
+      <div className="btn" onClick={toggleTheme}>
+        <img src={isDarkMode ? sun : moon} alt="" className="btn_img" />
+        <div className="btn_text">{isDarkMode ? "Light" : "Dark"}</div>
       </div>
     </div>
   );

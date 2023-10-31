@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Container, Header } from "../../../layout";
-import "./hero.css";
+// import "./hero.css";
 import Marquee from "react-fast-marquee";
 import { mfive, mfour, mone, mthree, mtwo } from "../../../../assets";
 import { useLocation } from "react-router-dom";

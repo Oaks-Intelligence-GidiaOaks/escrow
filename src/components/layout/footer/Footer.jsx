@@ -1,8 +1,19 @@
-import { logo, facebook, twitter, linkedln } from "../../../assets";
+import {
+  logo,
+  facebook,
+  twitter,
+  linkedln,
+  facebook_light,
+  linkedln_light,
+  twitter_light,
+} from "../../../assets";
 import { Link } from "react-router-dom";
 import Container from "../container/Container";
+import { useTheme } from "../../../theme/useTheme";
 
 function Footer() {
+  const { isDarkMode } = useTheme();
+
   return (
     <>
       <section className="footer pt-5">
@@ -82,9 +93,21 @@ function Footer() {
           </div>
           <div className="flex justify-between items-center pt-5 pb-5">
             <div className="flex items-center">
-              <img src={facebook} alt="facebook link" className="px-3" />
-              <img src={twitter} alt="twitter link" className="py-3 px-3" />
-              <img src={linkedln} alt="linkedln link" className="px-3" />
+              <img
+                src={isDarkMode ? facebook : facebook_light}
+                alt="facebook link"
+                className="px-3 link"
+              />
+              <img
+                src={isDarkMode ? twitter : twitter_light}
+                alt="twitter link"
+                className="py-3 px-3 link"
+              />
+              <img
+                src={isDarkMode ? linkedln : linkedln_light}
+                alt="linkedln link"
+                className="px-3 link"
+              />
             </div>
             <div className="copyright">©2023 Escrow-Tech Limited</div>
           </div>

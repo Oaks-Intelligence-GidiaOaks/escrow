@@ -14,14 +14,23 @@ import {
   mission_2,
   mission_3,
   sky,
+  product_1_light,
+  product_2_light,
+  product_3_light,
+  dashboard_light,
+  browse_img_1_light,
+  browse_img_2_light,
+  browse_img_3_light,
 } from "../assets";
 import { Footer, Hero } from "../components";
 // import { product_1, product_2, product_3, dashboard } from "../assets";
 import Container from "../components/layout/container/Container";
 import Carousel from "../components/layout/carousel/Carousel";
 import { hero } from "../assets";
+import { useTheme } from "../theme/useTheme";
 
 const LandingPage = () => {
+  const { isDarkMode } = useTheme();
   return (
     <>
       <section className="landing-page-sections ">
@@ -31,11 +40,11 @@ const LandingPage = () => {
           image={hero}
         />
         <Container>
-          <p className="landing-page-products pb-5">Our Products</p>
+          <p className="landing-page-products pb-5 pt-10">Our Products</p>
           <div className="grid grid-flow-row md:grid-flow-col grid-cols-1 md:grid-cols-12 justify-center gap-y-3 gap-x-5 py-5 pb-">
             <div className="col-span-12 md:col-span-4 lg:col-span-4 landing-page-product-card">
               <div className="img-product">
-                <img src={product_1} alt="" />
+                <img src={isDarkMode ? product_1 : product_1_light} alt="" />
               </div>
               <div className="img-text pt-5">
                 <p className="img-product-head">Carbon Credit Management</p>
@@ -51,7 +60,7 @@ const LandingPage = () => {
 
             <div className="col-span-12 md:col-span-4 lg:col-span-4 landing-page-product-card">
               <div className="img-product">
-                <img src={product_2} alt="" />
+                <img src={isDarkMode ? product_2 : product_2_light} alt="" />
               </div>
               <div className="img-text pt-5">
                 <p className="img-product-head">Sustainable Home Retrofit</p>
@@ -65,7 +74,7 @@ const LandingPage = () => {
             </div>
             <div className="col-span-12 md:col-span-4 lg:col-span-4 landing-page-product-card">
               <div className="img-product">
-                <img src={product_3} alt="" />
+                <img src={isDarkMode ? product_3 : product_3_light} alt="" />
               </div>
               <div className="img-text pt-5">
                 <p className="img-product-head">Categorize and Quantify GHG</p>
@@ -81,10 +90,14 @@ const LandingPage = () => {
           </div>
 
           <div className="pt-5 pb-12 flex justify-center items-center">
-            <button className="portfolio-btn">Browse Portfolio</button>
+            <button className="portfolio-btn text-sm lg:px-8 lg:py-4 lg:text-xl">
+              Browse Portfolio
+            </button>
           </div>
         </Container>
+      </section>
 
+      <section className="technology-section pb-5 pt-5">
         <Container>
           <div className="flex justify-center items-center pb-5 pt-6">
             <h5 className="technology text-center">
@@ -108,13 +121,24 @@ const LandingPage = () => {
             </button>
           </div>
           <div className="dashboard flex justify-center items-center">
-            <img src={dashboard} alt="" className="w-full sm:w-1/2 py-8" />
+            <img
+              src={isDarkMode ? dashboard : dashboard_light}
+              alt=""
+              className="w-full sm:w-1/2 py-8"
+            />
           </div>
         </Container>
+      </section>
 
+      <section className="services-section pb-5">
         <Container>
           <p className="landing-page-products pb-10 pt-24">Our Services</p>
           <Carousel />
+        </Container>
+      </section>
+
+      <section className="browse-section pt-5">
+        <Container>
           <div className="flex justify-center items-center py-10">
             <div className="browse-section-card">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-5">
@@ -130,10 +154,15 @@ const LandingPage = () => {
                     sustainable world through the seamless integration of
                     technology and environmental stewardship.
                   </p>
-                  <button className="browse-col-1-btn">Browse Products</button>
+                  <button className="browse-col-1-btn text-sm lg:px-8 lg:py-4 lg:text-xl">
+                    Browse Products
+                  </button>
                 </div>
                 <div className="browse-col-2">
-                  <img src={browse_img_1} alt="" />
+                  <img
+                    src={isDarkMode ? browse_img_1 : browse_img_1_light}
+                    alt=""
+                  />
                 </div>
                 <div className="browse-col-3">
                   <div className="browse-col-box-3">
@@ -147,7 +176,7 @@ const LandingPage = () => {
                     <div className="flex justify-center items-center">
                       <div className="browse-box">
                         <img
-                          src={browse_img_2}
+                          src={isDarkMode ? browse_img_2 : browse_img_2_light}
                           alt=""
                           className="broswe-img p-2"
                         />
@@ -165,14 +194,20 @@ const LandingPage = () => {
                       Malesuada maecenas ac bibendum consectetur.
                     </p>
                     <div className="flex justify-center items-center">
-                      <img src={browse_img_3} alt="" />
+                      <img
+                        src={isDarkMode ? browse_img_3 : browse_img_3_light}
+                        alt=""
+                        className="pt-10"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </Container>
 
+        <Container>
           <div className="py-12">
             <div className="flex justify-center items-center py-10">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5">
@@ -235,11 +270,11 @@ const LandingPage = () => {
         </Container>
       </section>
 
-      <section className="landing-page-sections flex justify-center items-center ">
+      <section className="landing-page-sections globe-white flex justify-center items-center ">
         <img src={globe} alt="" className="w-full globe" />
       </section>
 
-      <section className="landing-page-sections pb-10">
+      <section className="landing-page-sections globe-white pb-10">
         <Container>
           <div className="flex justify-center items-center py-10">
             <div
@@ -267,8 +302,9 @@ const LandingPage = () => {
                     Our mission is simple: Technology Touching Lives. We strive
                     to generate prosperity for people everywhere, and we know
                     that every little act of kindness can make a significant
-                    impact on society. That's why we're committed to building a
-                    better world through technology, one solution at a time.
+                    impact on society. That&apos;s why we&apos;re committed to
+                    building a better world through technology, one solution at
+                    a time.
                   </p>
                 </div>
                 <div className="mission-col-3">
@@ -277,10 +313,10 @@ const LandingPage = () => {
                     Escrow-Tech envisions a world where technology serves as a
                     force for good, not just a tool. We invite you to join us in
                     this endeavor and be a part of something truly special.
-                    Whether you're a client, a partner, or someone who shares
-                    our vision, we welcome you to the Escrow-Tech family.
-                    Together, let's make a difference and create a better future
-                    for all.
+                    Whether you&apos;re a client, a partner, or someone who
+                    shares our vision, we welcome you to the Escrow-Tech family.
+                    Together, let&apos;s make a difference and create a better
+                    future for all.
                   </p>
                 </div>
               </div>
