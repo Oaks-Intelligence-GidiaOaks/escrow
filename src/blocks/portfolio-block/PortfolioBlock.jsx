@@ -6,7 +6,14 @@ import {
   PortfolioCarbonible,
   PortfolioCarbAdjust,
 } from "../../components";
-import { left, port, right, port_light } from "../../assets";
+import {
+  left,
+  port,
+  right,
+  port_light,
+  left_light,
+  right_light,
+} from "../../assets";
 import "./PortfolioBlock.css";
 import Lottie from "lottie-react";
 import groovyWalkAnimation from "../../assets/images/groovyWalkAnimation.json";
@@ -58,7 +65,7 @@ const PortfolioBlock = () => {
           <div className="flex pt-[30px] max-w-[600px] overflow-y-scroll justify-between">
             {tabs.map((item, idx) => (
               <div
-                className={`lg:mr-[29px] :mr-[15px] text-[#C4CAD6] text-[15px] lg:text-[24px] pb-[10px] cursor-pointer px-[10px] whitespace-nowrap ${
+                className={`lg:mr-[29px] :mr-[15px] text-[#C4CAD6] text-[15px] lg:text-[24px] pb-[10px] cursor-pointer px-[10px] whitespace-nowrap tabs-font ${
                   index === idx && "borderb"
                 } `}
                 key={idx}
@@ -79,7 +86,7 @@ const PortfolioBlock = () => {
                 window.scrollTo(0, 0, window.innerHeight / 1.4);
               }}
             >
-              <img src={left} alt="left arrow" />
+              <img src={isDarkMode ? left : left_light} alt="left arrow" />
             </div>
             <div
               className="arrow_wrap"
@@ -88,7 +95,7 @@ const PortfolioBlock = () => {
                 window.scrollTo(0, window.innerHeight / 3);
               }}
             >
-              <img src={right} alt="right arrow" />
+              <img src={isDarkMode ? right : right_light} alt="right arrow" />
             </div>
           </div>
         </Container>

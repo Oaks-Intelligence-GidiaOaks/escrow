@@ -12,12 +12,21 @@ import {
   postman,
   reactjs,
   vector,
+  vector_light,
+  nextjs_light,
+  three,
+  four,
 } from "../../../../assets";
+import { useTheme } from "../../../../theme/useTheme";
 
 const PortfolioCarbAdjust = () => {
+  const { isDarkMode } = useTheme();
+
   return (
     <div>
-      <div className="title_port">Carbon-Adjust</div>
+      <div className={isDarkMode ? "title_port" : "title_port_light"}>
+        Carbon-Adjust
+      </div>
       <div className="port_item_wrap">
         <div className="port_wrap_text">
           <div className="tool_title">Abstract</div>
@@ -28,7 +37,7 @@ const PortfolioCarbAdjust = () => {
             in home improvements. Carbon-Adjust recognises that individuals
             cannot own carbon credits and so provides an end-to-end solution
             that includes aggregators, home improvement agencies, and financial
-            institutions.
+            institutions. <br />
             <br /> Home owners or residents who have made investments in energy
             efficient projects or acquisitions can connect with private entities
             to help them acquire the carbon credits on these projects for an
@@ -42,7 +51,11 @@ const PortfolioCarbAdjust = () => {
             <img src={ai} alt="ai" className="tool_img" />
             <img src={heroku} alt="heroku" className="tool_img" />
             <img src={html5} alt="html" className="tool_img" />
-            <img src={nextjs} alt="next" className="tool_img" />
+            <img
+              src={isDarkMode ? nextjs : nextjs_light}
+              alt="next"
+              className="tool_img next-light"
+            />
             <img src={postfresql} alt="postfresql" className="tool_img" />
             <img src={postman} alt="postman" className="tool_img" />
             <img src={reactjs} alt="reactjs" className="tool_img w-[300px]" />
@@ -50,8 +63,8 @@ const PortfolioCarbAdjust = () => {
         </div>
         <div className="w-full flex flex-wrap feat_one">
           <div className="w-full lg:w-1/2 flex flex-col  items-start">
-            <div className="vector_wrap">
-              <img src={vector} alt="" />
+            <div className="vector_wrap arrow_wrap">
+              <img src={isDarkMode ? vector : vector_light} alt="" />
             </div>
             <div className="lg:text-[50px] text-[35px] text-gradient leading-[120%] font-black mb-[16px] text-left w-full hero_text">
               Carbon Credits Acquisition for Home Owners
@@ -62,22 +75,25 @@ const PortfolioCarbAdjust = () => {
               financial support for your retrofitting endeavors.
             </div>
             <div className="w-full flex justify-start items-center gap-x-6 text-center py-8">
-              <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
+              <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl btn-tech">
                 Explore Product
               </button>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 flex justify-center items-center ">
-            <img src={adone} className="w-[85%] feat_img" />
+          <div className="w-full lg:w-1/2 flex justify-center items-center">
+            <img
+              src={isDarkMode ? adone : three}
+              className="w-[85%] feat_img"
+            />
           </div>
         </div>
         <div className="w-full flex flex-wrap feat_two">
           <div className="w-full lg:w-1/2 flex items-start feat_img_wrap">
-            <img src={adtwo} className="w-[85%] feat_img" />
+            <img src={isDarkMode ? adtwo : four} className="w-[85%] feat_img" />
           </div>
           <div className="w-full lg:w-1/2 flex flex-col  items-start">
-            <div className="vector_wrap">
-              <img src={vector} alt="" />
+            <div className="vector_wrap arrow_wrap">
+              <img src={isDarkMode ? vector : vector_light} alt="" />
             </div>
             <div className="lg:text-[50px] text-[35px] text-gradient leading-[120%] font-black mb-[16px] text-left w-full hero_text">
               Sustainable Home Retrofit Platform: Carbon-Adjust
@@ -88,7 +104,7 @@ const PortfolioCarbAdjust = () => {
               make money from their green investment.
             </div>
             <div className="w-full flex justify-start items-center gap-x-6 text-center py-8">
-              <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
+              <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl btn-tech">
                 Explore Product
               </button>
             </div>

@@ -889,3 +889,64 @@ button:focus-visible {
 .port_block_wrap {
   background: #fff !important;
 }
+.abstract-text {
+  color: #4e4e4e !important;
+  font-family: Satoshi !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+}
+.tool_title {
+  color: #232323 !important;
+  font-family: Satoshi !important;
+  font-size: 32px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+}
+.hero_text {
+  color: #232323;
+  font-family: Satoshi;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.port_item_wrap {
+  border-radius: 22px !important;
+  border: 1.5px solid #dedede !important;
+  background: #f7f9f9 !important;
+}
+.title_port_light {
+  color: #232323 !important;
+  font-size: 52px !important;
+  font-style: normal !important;
+  font-weight: 900 !important;
+  line-height: normal !important;
+  margin-top: 60.5px !important;
+  margin-bottom: 30px !important;
+}
+.arrow_wrap {
+  border-radius: 8px;
+  border: 1.5px solid #dedede !important;
+  background: #f7f9f9 !important;
+  padding: 10px;
+  margin-left: 14px;
+  cursor: pointer;
+}
+.next-light {
+  border-radius: 11.934px;
+  border: 1px solid #282d45;
+  background: #fff;
+}
+.btn-tech {
+  border-radius: 16px !important;
+  border: 1px solid #5c00e7 !important;
+  padding: 16px 32px !important;
+  background: #fff !important;
+  color: #6306b2 !important;
+}
+.tabs-font {
+  color: #232323;
+}

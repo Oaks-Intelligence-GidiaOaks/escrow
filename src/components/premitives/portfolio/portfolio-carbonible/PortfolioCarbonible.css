@@ -23,6 +23,15 @@
   overflow-x: scroll;
 }
 
+.abstract-text {
+  color: #c4cad6;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 /* .feat_img_wrap {
   width: fit-content;
   height: fit-content;
