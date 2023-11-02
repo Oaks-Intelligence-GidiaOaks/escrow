@@ -41,7 +41,7 @@ const ContactPage = () => {
         await addDoc(collection(db, "contact"), formData);
 
         // Show success toast
-        toast.success("Form submitted successfully!", {
+        toast.success("Your request has been received successfully!", {
           position: "top-right",
         });
 
