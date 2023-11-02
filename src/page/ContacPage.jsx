@@ -11,9 +11,64 @@ import {
 } from "../assets";
 import Container from "../components/layout/container/Container";
 import { useTheme } from "../theme/useTheme";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../data/firebase";
 
-const ContacPage = () => {
+const ContactPage = () => {
   const { isDarkMode } = useTheme();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [validationError, setValidationError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (
+      formData.name &&
+      formData.email &&
+      formData.subject &&
+      formData.message
+    ) {
+      try {
+        await addDoc(collection(db, "contact"), formData);
+
+        // Show success toast
+        toast.success("Form submitted successfully!", {
+          position: "top-right",
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } catch (error) {
+        console.error("Error submitting the form:", error);
+      }
+    } else {
+      setValidationError("All fields are required.");
+      toast.error("All fields are required", {
+        position: "top-right",
+      });
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
   return (
     <>
@@ -27,68 +82,91 @@ const ContacPage = () => {
           <div className="grid grid-flow-row md:grid-flow-col grid-cols-1 md:grid-cols-12 justify-center pt-10 pb-10 gap-y-4 gap-x-5">
             <div className="py-2 col-span-12 md:col-span-6 lg:col-span-7">
               <div className="form-box">
+                {/* {validationError && (
+                  <div className="validation-error text-danger">
+                    {validationError}
+                  </div>
+                )} */}
+
                 <p className="card-form-head pb-1">Keep In Touch</p>
                 <p className="card-form-title mb-5">
                   We are easily reachable through our contact form or email
                 </p>
-                <div className="contact-form-inputs mb-5">
-                  <label
-                    htmlFor="Name"
-                    className="contact-form-label block mb-2"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="contact-form-input block w-full"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div className="contact-form-inputs mb-5">
-                  <label
-                    htmlFor="Name"
-                    className="contact-form-label block mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="contact-form-input block w-full"
-                    placeholder="youremail@example.com"
-                  />
-                </div>
-                <div className="contact-form-inputs mb-5">
-                  <label
-                    htmlFor="Subject"
-                    className="contact-form-label block mb-2"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    className="contact-form-input block w-full"
-                    placeholder="E.g (Quote to build to a trading platform)"
-                  />
-                </div>
-                <div className="contact-form-inputs mb-5">
-                  <label
-                    htmlFor="Subject"
-                    className="contact-form-label block mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    type="text"
-                    className="contact-form-textarea block w-full"
-                    placeholder="E.g (Quote to build to a trading platform)"
-                  ></textarea>
-                </div>
+                <form onSubmit={handleSubmit}>
+                  <div className="contact-form-inputs mb-5">
+                    <label
+                      htmlFor="name"
+                      className="contact-form-label block mb-2"
+                    >
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      className="contact-form-input block w-full"
+                      placeholder="Your name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="contact-form-inputs mb-5">
+                    <label
+                      htmlFor="email"
+                      className="contact-form-label block mb-2"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      className="contact-form-input block w-full"
+                      placeholder="youremail@example.com"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="contact-form-inputs mb-5">
+                    <label
+                      htmlFor="subject"
+                      className="contact-form-label block mb-2"
+                    >
+                      Subject
+                    </label>
+                    <input
+                      type="text"
+                      className="contact-form-input block w-full"
+                      placeholder="E.g (Quote to build to a trading platform)"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="contact-form-inputs mb-5">
+                    <label
+                      htmlFor="message"
+                      className="contact-form-label block mb-2"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      type="text"
+                      className="contact-form-textarea block w-full"
+                      placeholder="E.g (Quote to build to a trading platform)"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                    ></textarea>
+                  </div>
 
-                <div className="contact-form-inputs mb-4">
-                  <button className="contact-form-submit-btn w-full">
-                    Submit
-                  </button>
-                </div>
+                  <div className="contact-form-inputs mb-4">
+                    <button
+                      className="contact-form-submit-btn w-full"
+                      type="submit"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
             <div className="py-2 col-span-12 md:col-span-3 lg:col-span-4">
@@ -136,4 +214,4 @@ const ContacPage = () => {
   );
 };
 
-export default ContacPage;
+export default ContactPage;
