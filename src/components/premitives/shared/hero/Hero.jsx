@@ -4,8 +4,15 @@ import { Container, Header } from "../../../layout";
 import Marquee from "react-fast-marquee";
 import { mfive, mfour, mone, mthree, mtwo } from "../../../../assets";
 import { useLocation } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Hero = ({ title, text, image = "", imageComponent: Image }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const location = useLocation();
   const urlPath = location.pathname;
   return (
@@ -16,24 +23,44 @@ const Hero = ({ title, text, image = "", imageComponent: Image }) => {
         <Header />
         <div className="w-full flex flex-wrap pb-10">
           <div className="w-full lg:w-[40%] flex flex-col justify-center items-start">
-            <div className="lg:text-[50px] text-[35px] text-gradient leading-[120%] font-black mb-[16px] text-left w-full hero_text">
+            <div
+              className="lg:text-[50px] text-[35px] text-gradient leading-[120%] font-black mb-[16px] text-left w-full hero_text"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+            >
               {title}
             </div>
-            <div className="w-full mb-[16px] lg:text-[24px] text-[20px] text-hero">
+            <div
+              className="w-full mb-[16px] lg:text-[24px] text-[20px] text-hero"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               {text}
             </div>
             {urlPath === "/" && (
               <div className="w-full flex justify-start items-center gap-x-6 text-center py-8">
-                <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
+                <button
+                  className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl"
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                >
                   Get Started
                 </button>
-                <button className="tecknology-btn-2 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
+                <button
+                  className="tecknology-btn-2 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
                   Learn More
                 </button>
               </div>
             )}
           </div>
-          <div className="w-full lg:w-[60%] flex justify-center items-center ">
+          <div
+            className="w-full lg:w-[60%] flex justify-center items-center"
+            data-aos="flip-up"
+            data-aos-duration="1000"
+          >
             {Image || <img src={image} className=" w-[85%]" />}
           </div>
         </div>

@@ -18,9 +18,15 @@ import {
   four,
 } from "../../../../assets";
 import { useTheme } from "../../../../theme/useTheme";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const PortfolioCarbAdjust = () => {
   const { isDarkMode } = useTheme();
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <div>
@@ -29,8 +35,14 @@ const PortfolioCarbAdjust = () => {
       </div>
       <div className="port_item_wrap">
         <div className="port_wrap_text">
-          <div className="tool_title">Abstract</div>
-          <div>
+          <div
+            className="tool_title"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            Abstract
+          </div>
+          <div data-aos="fade-up" data-aos-duration="1000">
             Carbon-Adjust is the first global large-scale platform offering home
             residents the opportunity to commercialise the carbon credit
             benefits that exist in the energy efficiency investments they make
@@ -45,8 +57,18 @@ const PortfolioCarbAdjust = () => {
           </div>
         </div>
         <div className="port_wrap_text">
-          <div className="tool_title">Tool Stack</div>
-          <div className="flex tool_img_wrap">
+          <div
+            className="tool_title"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Tool Stack
+          </div>
+          <div
+            className="flex tool_img_wrap"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <img src={figma} alt="fig" className="tool_img" />
             <img src={ai} alt="ai" className="tool_img" />
             <img src={heroku} alt="heroku" className="tool_img" />
@@ -62,7 +84,11 @@ const PortfolioCarbAdjust = () => {
           </div>
         </div>
         <div className="w-full flex flex-wrap feat_one">
-          <div className="w-full lg:w-1/2 flex flex-col  items-start">
+          <div
+            className="w-full lg:w-1/2 flex flex-col  items-start"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
             <div className="vector_wrap arrow_wrap">
               <img src={isDarkMode ? vector : vector_light} alt="" />
             </div>
@@ -84,12 +110,19 @@ const PortfolioCarbAdjust = () => {
             <img
               src={isDarkMode ? adone : three}
               className="w-[85%] feat_img"
+              data-aos="fade-up"
+              data-aos-duration="1000"
             />
           </div>
         </div>
         <div className="w-full flex flex-wrap feat_two">
           <div className="w-full lg:w-1/2 flex items-start feat_img_wrap">
-            <img src={isDarkMode ? adtwo : four} className="w-[85%] feat_img" />
+            <img
+              src={isDarkMode ? adtwo : four}
+              className="w-[85%] feat_img"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+            />
           </div>
           <div className="w-full lg:w-1/2 flex flex-col  items-start">
             <div className="vector_wrap arrow_wrap">
@@ -98,13 +131,21 @@ const PortfolioCarbAdjust = () => {
             <div className="lg:text-[50px] text-[35px] text-gradient leading-[120%] font-black mb-[16px] text-left w-full hero_text">
               Sustainable Home Retrofit Platform: Carbon-Adjust
             </div>
-            <div className="w-full mb-[16px] lg:text-[24px] text-[20px]">
+            <div
+              className="w-full mb-[16px] lg:text-[24px] text-[20px]"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               Bridging the gap between homeowners, financials institutions and
               retrofitters to enable homeowners access loans to go green and
               make money from their green investment.
             </div>
             <div className="w-full flex justify-start items-center gap-x-6 text-center py-8">
-              <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl btn-tech">
+              <button
+                className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl btn-tech"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
                 Explore Product
               </button>
             </div>

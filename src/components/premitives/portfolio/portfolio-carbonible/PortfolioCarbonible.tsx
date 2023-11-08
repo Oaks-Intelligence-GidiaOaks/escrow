@@ -18,10 +18,15 @@ import {
   one,
 } from "../../../../assets";
 import { useTheme } from "../../../../theme/useTheme";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const PortfolioCarbonible = () => {
   const { isDarkMode } = useTheme();
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div>
       <div className={isDarkMode ? "title_port" : "title_port_light"}>
@@ -29,8 +34,18 @@ const PortfolioCarbonible = () => {
       </div>
       <div className="port_item_wrap">
         <div className="port_wrap_text">
-          <div className="tool_title">Abstract</div>
-          <div className="abstract-text">
+          <div
+            className="tool_title"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            Abstract
+          </div>
+          <div
+            className="abstract-text"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
             Carbonible emerges as a critical solution to confront the urgent and
             alarming issue of carbon emissions, one of the most pressing threats
             to our planet today. In a world without a platform like Carbonible,
@@ -55,8 +70,18 @@ const PortfolioCarbonible = () => {
           </div>
         </div>
         <div className="port_wrap_text">
-          <div className="tool_title">Tool Stack</div>
-          <div className="flex tool_img_wrap">
+          <div
+            className="tool_title"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Tool Stack
+          </div>
+          <div
+            className="flex tool_img_wrap"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <img src={figma} alt="fig" className="tool_img" />
             <img src={ai} alt="ai" className="tool_img" />
             <img src={heroku} alt="heroku" className="tool_img" />
@@ -72,7 +97,11 @@ const PortfolioCarbonible = () => {
           </div>
         </div>
         <div className="w-full flex flex-wrap feat_one">
-          <div className="w-full lg:w-1/2 flex flex-col  items-start">
+          <div
+            className="w-full lg:w-1/2 flex flex-col  items-start"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
             <div className="vector_wrap arrow_wrap">
               <img src={isDarkMode ? vector : vector_light} alt="" />
             </div>
@@ -95,6 +124,8 @@ const PortfolioCarbonible = () => {
             <img
               src={isDarkMode ? nibledash : one}
               className="w-[85%] feat_img"
+              data-aos="fade-down"
+              data-aos-duration="1000"
             />
           </div>
         </div>
@@ -103,6 +134,8 @@ const PortfolioCarbonible = () => {
             <img
               src={isDarkMode ? buycarbo : adtwo_light}
               className="w-[85%] feat_img"
+              data-aos="fade-up"
+              data-aos-duration="1000"
             />
           </div>
           <div className="w-full lg:w-1/2 flex flex-col  items-start">
@@ -112,14 +145,22 @@ const PortfolioCarbonible = () => {
             <div className="lg:text-[50px] text-[35px] text-gradient leading-[120%] font-black mb-[16px] text-left w-full hero_text">
               Generate, Trade & Retire Carbon Credit{" "}
             </div>
-            <div className="w-full mb-[16px] lg:text-[24px] text-[20px] abstract-text">
+            <div
+              className="w-full mb-[16px] lg:text-[24px] text-[20px] abstract-text"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               Generate Carbon credits from your green practices that are
               accredited by Standardized bodies such as Verra and iCR. Sell
               carbon credits in a regulated marketplace where you define the
               price.
             </div>
             <div className="w-full flex justify-start items-center gap-x-6 text-center py-8">
-              <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl btn-tech">
+              <button
+                className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl btn-tech"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
                 Explore Product
               </button>
             </div>

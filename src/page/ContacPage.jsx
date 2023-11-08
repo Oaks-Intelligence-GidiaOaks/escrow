@@ -11,11 +11,13 @@ import {
 } from "../assets";
 import Container from "../components/layout/container/Container";
 import { useTheme } from "../theme/useTheme";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../data/firebase";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ContactPage = () => {
   const { isDarkMode } = useTheme();
@@ -25,6 +27,10 @@ const ContactPage = () => {
     subject: "",
     message: "",
   });
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  const [isSubmitting, setIsSubmitting] = useState(false); // State variable to track submission status
 
   const [validationError, setValidationError] = useState("");
 
@@ -37,22 +43,39 @@ const ContactPage = () => {
       formData.subject &&
       formData.message
     ) {
+      setIsSubmitting(true);
       try {
         await addDoc(collection(db, "contact"), formData);
-
-        // Show success toast
-        toast.success("Your request has been received successfully!", {
-          position: "top-right",
+        const response = await fetch("http://localhost:3001/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         });
+        console.log(response);
+        if (response.ok) {
+          // Show success toast
+          toast.success("Your request has been received successfully!", {
+            position: "top-right",
+          });
 
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        } else {
+          console.error("Error sending email");
+          toast.error("Error sending email", {
+            position: "top-right",
+          });
+        }
       } catch (error) {
-        console.error("Error submitting the form:", error);
+        console.error("Error sending email:", error);
+      } finally {
+        setIsSubmitting(false);
       }
     } else {
       setValidationError("All fields are required.");
@@ -88,11 +111,25 @@ const ContactPage = () => {
                   </div>
                 )} */}
 
-                <p className="card-form-head pb-1">Keep In Touch</p>
-                <p className="card-form-title mb-5">
+                <p
+                  className="card-form-head pb-1"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  Keep In Touch
+                </p>
+                <p
+                  className="card-form-title mb-5"
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                >
                   We are easily reachable through our contact form or email
                 </p>
-                <form onSubmit={handleSubmit}>
+                <form
+                  onSubmit={handleSubmit}
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
                   <div className="contact-form-inputs mb-5">
                     <label
                       htmlFor="name"
@@ -162,15 +199,20 @@ const ContactPage = () => {
                     <button
                       className="contact-form-submit-btn w-full"
                       type="submit"
+                      disabled={isSubmitting}
                     >
-                      Submit
+                      {isSubmitting ? "Submitting..." : "Submit"}
                     </button>
                   </div>
                 </form>
               </div>
             </div>
             <div className="py-2 col-span-12 md:col-span-3 lg:col-span-4">
-              <div className="card-contact mb-5">
+              <div
+                className="card-contact mb-5"
+                data-aos="flip-right"
+                data-aos-duration="1000"
+              >
                 <img
                   src={isDarkMode ? cardIcon1 : cardIcon1_light}
                   alt="cardIcon1"
@@ -181,7 +223,11 @@ const ContactPage = () => {
                   customercare@escrow-tech.co.uk
                 </p>
               </div>
-              <div className="card-contact mb-5">
+              <div
+                className="card-contact mb-5"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
                 <img
                   src={isDarkMode ? cardIcon2 : cardIcon2_light}
                   alt="cardIcon1"
@@ -194,7 +240,11 @@ const ContactPage = () => {
                   consultancy@escrow-tech.co.uk
                 </p>
               </div>
-              <div className="card-contact mb-5">
+              <div
+                className="card-contact mb-5"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
                 <img
                   src={isDarkMode ? cardIcon3 : cardIcon3_light}
                   alt="cardIcon1"

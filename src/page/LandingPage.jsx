@@ -29,9 +29,15 @@ import Container from "../components/layout/container/Container";
 import Carousel from "../components/layout/carousel/Carousel";
 import { hero } from "../assets";
 import { useTheme } from "../theme/useTheme";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const LandingPage = () => {
   const { isDarkMode } = useTheme();
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <section className="landing-page-sections ">
@@ -41,13 +47,32 @@ const LandingPage = () => {
           image={isDarkMode ? hero : hero_light}
         />
         <Container>
-          <p className="landing-page-products pb-5 pt-10">Our Products</p>
+          <p
+            className="landing-page-products pb-5 pt-10"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            Our Products
+          </p>
           <div className="grid grid-flow-row md:grid-flow-col grid-cols-1 md:grid-cols-12 justify-center gap-y-3 gap-x-5 py-5 pb-">
-            <div className="col-span-12 md:col-span-4 lg:col-span-4 landing-page-product-card">
+            <div
+              className="col-span-12 md:col-span-4 lg:col-span-4 landing-page-product-card"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <div className="img-product">
-                <img src={isDarkMode ? product_1 : product_1_light} alt="" />
+                <img
+                  src={isDarkMode ? product_1 : product_1_light}
+                  alt=""
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                />
               </div>
-              <div className="img-text pt-5">
+              <div
+                className="img-text pt-5"
+                data-aos="flip-down"
+                data-aos-duration="1000"
+              >
                 <p className="img-product-head">Carbon Credit Management</p>
                 <p className="img-product-title">System: Carbonible</p>
                 <p className="img-product-text pt-4 text-base md:text-sm sm:text-xs">
@@ -59,11 +84,24 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div className="col-span-12 md:col-span-4 lg:col-span-4 landing-page-product-card">
+            <div
+              className="col-span-12 md:col-span-4 lg:col-span-4 landing-page-product-card"
+              data-aos="flip-up"
+              data-aos-duration="1000"
+            >
               <div className="img-product">
-                <img src={isDarkMode ? product_2 : product_2_light} alt="" />
+                <img
+                  src={isDarkMode ? product_2 : product_2_light}
+                  alt=""
+                  data-aos="zoom-out"
+                  data-aos-duration="1000"
+                />
               </div>
-              <div className="img-text pt-5">
+              <div
+                className="img-text pt-5"
+                data-aos="flip-up"
+                data-aos-duration="1000"
+              >
                 <p className="img-product-head">Sustainable Home Retrofit</p>
                 <p className="img-product-title">Platform: Carbon-Adjust</p>
                 <p className="img-product-text pt-4 text-base md:text-sm sm:text-xs">
@@ -73,11 +111,24 @@ const LandingPage = () => {
                 </p>
               </div>
             </div>
-            <div className="col-span-12 md:col-span-4 lg:col-span-4 landing-page-product-card">
+            <div
+              className="col-span-12 md:col-span-4 lg:col-span-4 landing-page-product-card"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
               <div className="img-product">
-                <img src={isDarkMode ? product_3 : product_3_light} alt="" />
+                <img
+                  src={isDarkMode ? product_3 : product_3_light}
+                  alt=""
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                />
               </div>
-              <div className="img-text pt-5">
+              <div
+                className="img-text pt-5"
+                data-aos="flip-down"
+                data-aos-duration="1000"
+              >
                 <p className="img-product-head">Categorize and Quantify GHG</p>
                 <p className="img-product-title">Emissions: Carbosense</p>
                 <p className="img-product-text pt-4 text-base md:text-sm sm:text-xs">
@@ -90,7 +141,11 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <div className="pt-5 pb-12 flex justify-center items-center">
+          <div
+            className="pt-5 pb-12 flex justify-center items-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
             <button className="portfolio-btn text-sm lg:px-8 lg:py-4 lg:text-xl">
               Browse Portfolio
             </button>
@@ -106,7 +161,11 @@ const LandingPage = () => {
         }
       >
         <Container>
-          <div className="flex justify-center items-center pb-5 pt-6">
+          <div
+            className="flex justify-center items-center pb-5 pt-6"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+          >
             <h5 className="technology text-center">
               Using Technology to Foster Sustainability
             </h5>
@@ -157,7 +216,11 @@ const LandingPage = () => {
           <div className="flex justify-center items-center py-10">
             <div className="browse-section-card">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-5">
-                <div className="browse-col-1">
+                <div
+                  className="browse-col-1"
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                >
                   <p className="browse-heading pb-5 ">
                     Using Technology to Foster Sustainability
                   </p>
@@ -173,13 +236,21 @@ const LandingPage = () => {
                     Browse Products
                   </button>
                 </div>
-                <div className="browse-col-2">
+                <div
+                  className="browse-col-2"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
                   <img
                     src={isDarkMode ? browse_img_1 : browse_img_1_light}
                     alt=""
                   />
                 </div>
-                <div className="browse-col-3">
+                <div
+                  className="browse-col-3"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
                   <div className="browse-col-box-3">
                     <p className="browse-col-head pb-4">
                       Stable Products You Can Trust
@@ -199,7 +270,11 @@ const LandingPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="browse-col-4">
+                <div
+                  className="browse-col-4"
+                  data-aos="fade-down"
+                  data-aos-duration="1000"
+                >
                   <div className="browse-col-box-3">
                     <p className="browse-col-head pb-4">
                       Fulfill Your Corporate Responsibility
@@ -227,33 +302,63 @@ const LandingPage = () => {
             <div className="flex justify-center items-center py-10">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5">
                 <div className="vision-col-1">
-                  <p className="vision-heading pb-8">What Makes us Stand Out</p>
-                  <div className="flex pb-3 text-base md:text-sm sm:text-xs">
+                  <p
+                    className="vision-heading pb-8"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                  >
+                    What Makes us Stand Out
+                  </p>
+                  <div
+                    className="flex pb-3 text-base md:text-sm sm:text-xs"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                  >
                     <img src={mark} className="me-2" alt="" />
                     <p className="vision-subtitle">Creativity</p>
                   </div>
-                  <p className="vision-lead pb-8">
+                  <p
+                    className="vision-lead pb-8"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                  >
                     Our experienced team of experts brings divers skills and
                     knowledge to the table, allowing us to tackle complex
                     challenges across a wide range of industries.
                   </p>
 
-                  <div className="flex pb-3 text-base md:text-sm sm:text-xs">
+                  <div
+                    className="flex pb-3 text-base md:text-sm sm:text-xs"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                  >
                     <img src={mark} className="me-2" alt="" />
                     <p className="vision-subtitle">Security</p>
                   </div>
-                  <p className="vision-lead pb-8">
+                  <p
+                    className="vision-lead pb-8"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                  >
                     We understand the importance of security and
                     confidentiality, and we have robust systems in place to
                     ensure that our clients’ data and information are protected
                     at all times.
                   </p>
 
-                  <div className="flex pb-3 text-base md:text-sm sm:text-xs">
+                  <div
+                    className="flex pb-3 text-base md:text-sm sm:text-xs"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  >
                     <img src={mark} className="me-2" alt="" />
                     <p className="vision-subtitle">Sustainability</p>
                   </div>
-                  <p className="vision-lead">
+                  <p
+                    className="vision-lead"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  >
                     Our Commitment to sustainability and social responsibility
                     sets us apart from other Tech Companies.We strive to use
                     technology ro make a positive impact on society and the
@@ -261,7 +366,11 @@ const LandingPage = () => {
                     in all that we do.
                   </p>
                 </div>
-                <div className="vision-col-2">
+                <div
+                  className="vision-col-2"
+                  data-aos="flip-down"
+                  data-aos-duration="1000"
+                >
                   <div className="flex justify-center items-center">
                     <img src={vision_img} alt="" />
                   </div>
@@ -270,7 +379,11 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <div className="global py-12">
+          <div
+            className="global py-12"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
             <p className="global-head pb-3">ABOUT OUR PRODUCTS</p>
             <p className="global-heading pb-3">
               Digital Solutions for Global <br /> Sustainability Challenges
@@ -286,7 +399,13 @@ const LandingPage = () => {
       </section>
 
       <section className="landing-page-sections globe-white flex justify-center items-center ">
-        <img src={globe} alt="" className="w-full globe" />
+        <img
+          src={globe}
+          alt=""
+          className="w-full globe"
+          data-aos="flip-right"
+          data-aos-duration="1000"
+        />
       </section>
 
       <section className="landing-page-sections globe-white pb-10">
@@ -300,20 +419,42 @@ const LandingPage = () => {
                 backgroundSize: "contain",
               }}
             >
-              <p className="mission-head pb-10 pt-5 text-center">Our Mission</p>
+              <p
+                className="mission-head pb-10 pt-5 text-center"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                Our Mission
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-6 md:p-2 lg:p-3">
-                <div className="mission-col-1">
+                <div
+                  className="mission-col-1"
+                  data-aos="fade-down"
+                  data-aos-duration="1000"
+                >
                   <img src={mission_1} alt="" className="pb-5" />
-                  <p className="mission-subtitle text-base md:text-sm sm:text-xs">
+                  <p
+                    className="mission-subtitle text-base md:text-sm sm:text-xs"
+                    data-aos="flip-up"
+                    data-aos-duration="1000"
+                  >
                     We believe that technology can be a force for good. We are
                     driven by our desire to use innovative digital tools like
                     AI, deep learning, NLP, and image recognition to touch lives
                     and reduce inequality in communities worldwide.
                   </p>
                 </div>
-                <div className="mission-col-2">
+                <div
+                  className="mission-col-2"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
                   <img src={mission_2} alt="" className="pb-5" />
-                  <p className="mission-subtitle text-base md:text-sm sm:text-xs">
+                  <p
+                    className="mission-subtitle text-base md:text-sm sm:text-xs"
+                    data-aos="flip-right"
+                    data-aos-duration="1000"
+                  >
                     Our mission is simple: Technology Touching Lives. We strive
                     to generate prosperity for people everywhere, and we know
                     that every little act of kindness can make a significant
@@ -322,9 +463,17 @@ const LandingPage = () => {
                     a time.
                   </p>
                 </div>
-                <div className="mission-col-3">
+                <div
+                  className="mission-col-3"
+                  data-aos="fade-down"
+                  data-aos-duration="1000"
+                >
                   <img src={mission_3} alt="" className="pb-5" />
-                  <p className="mission-subtitle text-base md:text-sm sm:text-xs">
+                  <p
+                    className="mission-subtitle text-base md:text-sm sm:text-xs"
+                    data-aos="flip-down"
+                    data-aos-duration="1000"
+                  >
                     Escrow-Tech envisions a world where technology serves as a
                     force for good, not just a tool. We invite you to join us in
                     this endeavor and be a part of something truly special.

@@ -164,8 +164,9 @@ button:focus-visible {
     font-size: 20px;
   }
   .links {
-    display: none;
+    display: none !important;
   }
+
   .btn {
     padding: 10px;
   }
@@ -949,4 +950,12 @@ button:focus-visible {
 }
 .tabs-font {
   color: #232323;
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 991px) {
+  .hidden {
+    display: block;
+  }
 }

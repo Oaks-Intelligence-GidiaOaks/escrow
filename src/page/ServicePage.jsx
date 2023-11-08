@@ -29,10 +29,15 @@ import {
 } from "../assets";
 import Container from "../components/layout/container/Container";
 import { useTheme } from "../theme/useTheme";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function ServicePage() {
   const { isDarkMode } = useTheme();
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <Hero
@@ -50,16 +55,32 @@ function ServicePage() {
                     src={services_step_1}
                     alt=""
                     className="md:me-4 invisible lg:visible"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
                   />
                   <div className="text-box md:mr-4 md:max-w-xl">
-                    <p className="services-box-head">Software Development </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-head"
+                      data-aos="fade-down"
+                      data-aos-duration="1000"
+                    >
+                      Software Development{" "}
+                    </p>
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Our software development services are designed to empower
                       businesses with <br /> innovative solutions to optimize
                       operations, increase efficiency, and streamline <br />
                       processes.
                     </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Our experienced teams of software developers possess
                       expertise in various <br />
                       programming languages and platforms, allowing us to craft
@@ -67,7 +88,11 @@ function ServicePage() {
                       solutions that address the unique requirements of our
                       clients.
                     </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Be it developing web or mobile applications, building
                       intricate software systems, or <br /> integrating
                       third-party tools, our software development services are
@@ -79,6 +104,8 @@ function ServicePage() {
                   <img
                     src={isDarkMode ? software : services_step_1_light}
                     className="ms-8 invisible lg:visible"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
                   />
                 </div>
               </div>
@@ -93,16 +120,32 @@ function ServicePage() {
                     src={services_step_2}
                     alt=""
                     className="md:me-4 invisible lg:visible"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
                   />
                   <div className="text-box flex-grow md:mr-4 md:max-w-xl">
-                    <p className="services-box-head">Advisory </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-head"
+                      data-aos="fade-down"
+                      data-aos-duration="1000"
+                    >
+                      Advisory{" "}
+                    </p>
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Our advisory services are dedicated to equipping
                       businesses with actionable insights <br /> and
                       recommendations to achieve their sustainability
                       objectives.
                     </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Our team of experienced advisors collaborates closely with
                       clients to <br /> comprehensively understand their
                       specific challenges and goals, providing tailored <br />{" "}
@@ -110,7 +153,11 @@ function ServicePage() {
                       efficiency, and sustainable <br /> supply chain
                       management.
                     </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Our advisory services are engineered to enable businesses
                       to take a comprehensive <br /> approach to sustainability,
                       resulting in cost savings, improved performance, and{" "}
@@ -120,6 +167,8 @@ function ServicePage() {
                   <img
                     src={isDarkMode ? advisory : services_step_2_light}
                     className="ms-8 invisible lg:visible"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
                   />
                 </div>
               </div>
@@ -134,23 +183,43 @@ function ServicePage() {
                     src={services_step_3}
                     alt=""
                     className="md:me-4 invisible lg:visible"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
                   />
                   <div className="text-box flex-grow md:mr-4 md:max-w-xl">
-                    <p className="services-box-head">Research </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-head"
+                      data-aos="fade-down"
+                      data-aos-duration="1000"
+                    >
+                      Research{" "}
+                    </p>
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Our software development services are designed to empower
                       businesses with <br /> innovative solutions to optimize
                       operations, increase efficiency, and streamline <br />{" "}
                       processes.
                     </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Our experienced teams of software developers possess
                       expertise in various <br /> programming languages and
                       platforms, allowing us to craft tailor-made software{" "}
                       <br /> solutions that address the unique requirements of
                       our clients.
                     </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Be it developing web or mobile applications, building
                       intricate software systems, or <br /> integrating
                       third-party tools, our software development services are
@@ -162,6 +231,8 @@ function ServicePage() {
                   <img
                     src={isDarkMode ? research_card : services_step_3_light}
                     className="ms-8 invisible lg:visible"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
                   />
                 </div>
               </div>
@@ -176,23 +247,43 @@ function ServicePage() {
                     src={services_step_4}
                     alt=""
                     className="md:me-4 invisible lg:visible"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
                   />
                   <div className="text-box flex-grow md:mr-4 md:max-w-xl">
-                    <p className="services-box-head">Consultancy </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-head"
+                      data-aos="fade-down"
+                      data-aos-duration="1000"
+                    >
+                      Consultancy{" "}
+                    </p>
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Our software development services are designed to empower
                       businesses with <br /> innovative solutions to optimize
                       operations, increase efficiency, and streamline <br />
                       processes.
                     </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Our experienced teams of software developers possess
                       expertise in various <br /> programming languages and
                       platforms, allowing us to craft tailor-made software
                       <br /> solutions that address the unique requirements of
                       our clients.
                     </p>
-                    <p className="services-box-text pb-4">
+                    <p
+                      className="services-box-text pb-4"
+                      data-aos="flip-right"
+                      data-aos-duration="1000"
+                    >
                       Be it developing web or mobile applications, building
                       intricate software systems, or <br /> integrating
                       third-party tools, our software development services are
@@ -204,12 +295,20 @@ function ServicePage() {
                   <img
                     src={isDarkMode ? consultancy : services_step_4_light}
                     className="ms-8 invisible lg:visible"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
                   />
                 </div>
               </div>
             </div>
           </div>
-          <p className="services-expertise pb-2 pt-5 mt-5">Our Expertise</p>
+          <p
+            className="services-expertise pb-2 pt-5 mt-5"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+          >
+            Our Expertise
+          </p>
           <div className="grid grid-flow-row md:grid-flow-col grid-cols-1 md:grid-cols-12 justify-center pb-5 gap-y-3 gap-x-5">
             <div className="py-2 col-span-12 md:col-span-6 lg:col-span-6">
               <div className="services-card-box">
@@ -220,14 +319,28 @@ function ServicePage() {
                   alt=""
                   className="services-card-image pb-3"
                 />
-                <p className="services-title pb-2">Artificial Intelligence</p>
-                <p className="services-text pb-5">
+                <p
+                  className="services-title pb-2"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  Artificial Intelligence
+                </p>
+                <p
+                  className="services-text pb-5"
+                  data-aos="flip-left"
+                  data-aos-duration="1000"
+                >
                   At Escrow-Tech, we leverage AI to provide unique and
                   individualized <br /> solutions to the most complex problems
                   faced by our clients.
                 </p>
 
-                <div className="rounded-card mt-3 invisible md:visible md:flex">
+                <div
+                  className="rounded-card mt-3 invisible md:visible md:flex"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
                   <img
                     src={isDarkMode ? code : code_light}
                     alt=""
@@ -248,8 +361,18 @@ function ServicePage() {
                   alt=""
                   className="services-card-image pb-3"
                 />
-                <p className="services-title pb-2">Big data analytics</p>
-                <p className="services-text pb-5">
+                <p
+                  className="services-title pb-2"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  Big data analytics
+                </p>
+                <p
+                  className="services-text pb-5"
+                  data-aos="flip-right"
+                  data-aos-duration="1000"
+                >
                   Our big data analytics team extracts valuable insights from
                   large data <br /> sets, using machine learning and AI
                   algorithms to uncover patterns <br /> and trends. We create
@@ -273,8 +396,18 @@ function ServicePage() {
                   alt=""
                   className="services-card-image pb-3"
                 />
-                <p className="services-title pb-2">Image Processing</p>
-                <p className="services-text pb-5">
+                <p
+                  className="services-title pb-2"
+                  data-aos="fade-down"
+                  data-aos-duration="1000"
+                >
+                  Image Processing
+                </p>
+                <p
+                  className="services-text pb-5"
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                >
                   At Escrow-Tech, we use image recognition to develop solutions
                   that <br /> enable our clients to analyze and interpret visual
                   data in real-time, <br /> such as security cameras and drone
@@ -294,8 +427,18 @@ function ServicePage() {
                   alt=""
                   className="services-card-image pb-3"
                 />
-                <p className="services-title pb-2">Artificial Intelligence</p>
-                <p className="services-text pb-5">
+                <p
+                  className="services-title pb-2"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  Artificial Intelligence
+                </p>
+                <p
+                  className="services-text pb-5"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
                   At Escrow-Tech, we leverage AI to provide unique and
                   individualized <br /> solutions to the most complex problems
                   faced by our clients.
