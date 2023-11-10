@@ -45,8 +45,6 @@ const Header = () => {
     <div className="">
       <div
         className="flex justify-between items-center w-full pb-8"
-        data-aos="fade-up"
-        data-aos-duration="1000"
       >
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="logo" />
