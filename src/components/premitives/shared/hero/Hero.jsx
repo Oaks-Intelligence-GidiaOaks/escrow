@@ -4,16 +4,9 @@ import { Container, Header } from "../../../layout";
 import Marquee from "react-fast-marquee";
 import { mfive, mfour, mone, mthree, mtwo } from "../../../../assets";
 import { useLocation } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import ScrollEffect from "../../../../animation/ScrollEffect";
 
 const Hero = ({ title, text, image = "", imageComponent: Image }) => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   const location = useLocation();
   const urlPath = location.pathname;
   return (
@@ -91,7 +84,7 @@ const Hero = ({ title, text, image = "", imageComponent: Image }) => {
             inViewTransitionTime={0.8}
             className="w-full lg:w-[60%] flex justify-center items-center"
           >
-            <div className="lg:w-1/2 w-full flex justify-start">
+            <div className="lg:w-1/2 w-full flex justify-start max-w-xs">
               <Marquee className="w-[200px]" autoFill>
                 <img src={mone} className="mx-[30px]" />
                 <img src={mtwo} className="mx-[30px]" />

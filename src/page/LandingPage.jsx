@@ -29,20 +29,14 @@ import Container from "../components/layout/container/Container";
 import Carousel from "../components/layout/carousel/Carousel";
 // import { hero } from "../assets";
 import { useTheme } from "../theme/useTheme";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import ScrollEffect from "../animation/ScrollEffect";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const { isDarkMode } = useTheme();
-  useEffect(() => {
-    AOS.init();
-  }, []);
   return (
     <>
-      <section className="landing-page-sections ">
+      <section className="landing-page-sections">
         <Hero
           title="Simple Solutions to Sustainability"
           text="Experience innovation like never before with out cutting edge technologies."

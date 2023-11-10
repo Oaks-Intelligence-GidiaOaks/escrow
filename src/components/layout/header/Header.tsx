@@ -65,7 +65,7 @@ const Header = () => {
           <img src={isDarkMode ? sun : moon} alt="" className="btn_img" />
           <div className="btn_text">{isDarkMode ? "Light" : "Dark"}</div>
         </div>
-        <div className="hidden" ref={ref}>
+        <div className="hiddenn" ref={ref}>
           <Hamburger
             toggled={isOpen}
             size={30}
@@ -75,7 +75,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="hidden pb-5">
+      <div className="hiddenn pb-5">
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -92,7 +92,7 @@ const Header = () => {
                 transition={{ duration: 0.3, delay: 0.2 }}
                 className=" w-full pt-0 border-b border-white/20 shadow-lg rounded-lg box-menu-inner"
               >
-                <ul className="grid gap-2 bg-inherit border pt-0">
+                <ul className="grid gap-2 bg-inherit pt-0">
                   {routes.map((route, idx) => (
                     <motion.li
                       initial={{ scale: 0, opacity: 0 }}

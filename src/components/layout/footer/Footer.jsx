@@ -10,15 +10,9 @@ import {
 import { Link } from "react-router-dom";
 import Container from "../container/Container";
 import { useTheme } from "../../../theme/useTheme";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 function Footer() {
   const { isDarkMode } = useTheme();
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <>
@@ -26,8 +20,8 @@ function Footer() {
         <Container>
           <div
             className="grid grid-flow-row md:grid-flow-col grid-cols-1 md:grid-cols-12 justify-center pt-10 pb-6 gap-y-4"
-            data-aos="fade-down"
-            data-aos-duration="1000"
+            // data-aos="fade-down"
+            // data-aos-duration="1000"
           >
             <div className="text-center py-2 col-span-12 md:col-span-3 md:text-left">
               <img

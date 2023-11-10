@@ -14,15 +14,9 @@ import {
 import { Hero } from "../components";
 import Container from "../components/layout/container/Container";
 import { useTheme } from "../theme/useTheme";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 const AboutPage = () => {
   const { isDarkMode } = useTheme();
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <>
@@ -38,15 +32,15 @@ const AboutPage = () => {
               <div className="about-card-1-block p-4 ">
                 <p
                   className="about-card-head-1"
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
+                  // data-aos="fade-right"
+                  // data-aos-duration="1000"
                 >
                   Who we are
                 </p>
                 <p
                   className="about-card-text pt-4"
-                  data-aos="flip-left"
-                  data-aos-duration="1000"
+                  // data-aos="flip-left"
+                  // data-aos-duration="1000"
                 >
                   Escrow-Tech is an innovative company that is revolutionizing
                   the way businesses approach problem-solving. Our team of
@@ -69,8 +63,8 @@ const AboutPage = () => {
                   <img
                     src={isDarkMode ? logo_black_big : logo_black_big_light}
                     alt=""
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
+                    // data-aos="fade-up"
+                    // data-aos-duration="1000"
                   />
                 </div>
               </div>
@@ -82,16 +76,16 @@ const AboutPage = () => {
               <div className="about-card-block p-4 ">
                 <div
                   className="flex"
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
+                  // data-aos="fade-right"
+                  // data-aos-duration="1000"
                 >
                   <img src={task} alt="task" />
                   <p className="about-card-head px-3">Our Plan</p>
                 </div>
                 <p
                   className="about-card-text pt-4"
-                  data-aos="flip-left"
-                  data-aos-duration="1000"
+                  // data-aos="flip-left"
+                  // data-aos-duration="1000"
                 >
                   The company&apos;s sustainability plan focuses on measuring,
                   reporting, and reducing carbon footprint across all emission
@@ -105,8 +99,8 @@ const AboutPage = () => {
                   <img
                     src={task_big}
                     alt=""
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
+                    // data-aos="fade-up"
+                    // data-aos-duration="1000"
                   />
                 </div>
               </div>
@@ -118,16 +112,16 @@ const AboutPage = () => {
               <div className="about-card-block p-4 ">
                 <div
                   className="flex"
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
+                  // data-aos="fade-right"
+                  // data-aos-duration="1000"
                 >
                   <img src={research} alt="task" />
                   <p className="about-card-head px-3">Research</p>
                 </div>
                 <p
                   className="about-card-text pt-4"
-                  data-aos="flip-left"
-                  data-aos-duration="1000"
+                  // data-aos="flip-left"
+                  // data-aos-duration="1000"
                 >
                   We understand that achieving net-zero emissions requires more
                   than just measurement and reporting. That&apos;s why we are
@@ -141,8 +135,8 @@ const AboutPage = () => {
                   <img
                     src={research_big}
                     alt=""
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
+                    // data-aos="fade-up"
+                    // data-aos-duration="1000"
                   />
                 </div>
               </div>
@@ -154,16 +148,16 @@ const AboutPage = () => {
               <div className="about-card-block p-4">
                 <div
                   className="flex"
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
+                  // data-aos="fade-right"
+                  // data-aos-duration="1000"
                 >
                   <img src={next} alt="task" />
                   <p className="about-card-head px-3">Next Steps</p>
                 </div>
                 <p
                   className="about-card-text pt-4 pb-5"
-                  data-aos="flip-left"
-                  data-aos-duration="1000"
+                  // data-aos="flip-left"
+                  // data-aos-duration="1000"
                 >
                   As we move forward on this journey towards sustainability, we
                   are committed to keeping our stakeholders informed about our
@@ -178,8 +172,8 @@ const AboutPage = () => {
                   <img
                     src={next_big}
                     alt=""
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
+                    // data-aos="fade-up"
+                    // data-aos-duration="1000"
                   />
                 </div>
               </div>

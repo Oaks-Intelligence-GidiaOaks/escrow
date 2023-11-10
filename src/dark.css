@@ -14,6 +14,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  width: 100%;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -545,6 +546,7 @@ button:focus-visible {
 }
 .landing-page-sections {
   background: #060b27;
+  width: 100vw !important;
 }
 .landing-page-products {
   font-family: Satoshi;
@@ -897,11 +899,11 @@ button:focus-visible {
   font-weight: 400;
   line-height: normal;
 }
-.hidden {
+.hiddenn {
   display: none;
 }
 @media (max-width: 991px) {
-  .hidden {
+  .hiddenn {
     display: block;
   }
   .box-menu {

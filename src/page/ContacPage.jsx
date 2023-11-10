@@ -11,13 +11,11 @@ import {
 } from "../assets";
 import Container from "../components/layout/container/Container";
 import { useTheme } from "../theme/useTheme";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../data/firebase";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const ContactPage = () => {
   const { isDarkMode } = useTheme();
@@ -27,9 +25,6 @@ const ContactPage = () => {
     subject: "",
     message: "",
   });
-  useEffect(() => {
-    AOS.init();
-  }, []);
   const [isSubmitting, setIsSubmitting] = useState(false); // State variable to track submission status
 
   const [validationError, setValidationError] = useState("");
@@ -113,22 +108,22 @@ const ContactPage = () => {
 
                 <p
                   className="card-form-head pb-1"
-                  data-aos="fade-left"
-                  data-aos-duration="1000"
+                  // data-aos="fade-left"
+                  // data-aos-duration="1000"
                 >
                   Keep In Touch
                 </p>
                 <p
                   className="card-form-title mb-5"
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
+                  // data-aos="fade-right"
+                  // data-aos-duration="1000"
                 >
                   We are easily reachable through our contact form or email
                 </p>
                 <form
                   onSubmit={handleSubmit}
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
+                  // data-aos="fade-up"
+                  // data-aos-duration="1000"
                 >
                   <div className="contact-form-inputs mb-5">
                     <label
@@ -210,8 +205,8 @@ const ContactPage = () => {
             <div className="py-2 col-span-12 md:col-span-3 lg:col-span-4">
               <div
                 className="card-contact mb-5"
-                data-aos="flip-right"
-                data-aos-duration="1000"
+                // data-aos="flip-right"
+                // data-aos-duration="1000"
               >
                 <img
                   src={isDarkMode ? cardIcon1 : cardIcon1_light}
@@ -225,8 +220,8 @@ const ContactPage = () => {
               </div>
               <div
                 className="card-contact mb-5"
-                data-aos="fade-up"
-                data-aos-duration="1000"
+                // data-aos="fade-up"
+                // data-aos-duration="1000"
               >
                 <img
                   src={isDarkMode ? cardIcon2 : cardIcon2_light}
@@ -242,8 +237,8 @@ const ContactPage = () => {
               </div>
               <div
                 className="card-contact mb-5"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <img
                   src={isDarkMode ? cardIcon3 : cardIcon3_light}
