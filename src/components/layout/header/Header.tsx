@@ -83,16 +83,16 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -100 }}
               transition={{ duration: 0.3 }}
-              className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-neutral-950 bg-opacity-90 backdrop-blur-md "
+              className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-neutral-950 bg-opacity-90 backdrop-blur-md box-menu"
             >
               <motion.div
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.5, opacity: 0 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
-                className="p-5 w-full pt-0 border-b border-white/20 shadow-lg rounded-lg bg-white"
+                className=" w-full pt-0 border-b border-white/20 shadow-lg rounded-lg box-menu-inner"
               >
-                <ul className="grid gap-2 bg-inherit border">
+                <ul className="grid gap-2 bg-inherit border pt-0">
                   {routes.map((route, idx) => (
                     <motion.li
                       initial={{ scale: 0, opacity: 0 }}
@@ -108,12 +108,10 @@ const Header = () => {
                     >
                       <NavLink
                         onClick={() => setOpen((prev) => !prev)}
-                        className={`flex items-center justify-center w-full p-10 rounded-xl ${
-                          isDarkMode ? "text-white" : "text-red"
-                        }`}
+                        className={`flex items-center justify-center w-full rounded-xl mobile-nav text-2xl`}
                         to={route.href}
                       >
-                        <span className="flex gap-1 text-lg pb-3">
+                        <span className="flex gap-1 pb-5 hover:text-white link-text">
                           {route.title}
                         </span>
                       </NavLink>
