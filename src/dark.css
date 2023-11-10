@@ -558,8 +558,8 @@ button:focus-visible {
   -webkit-text-fill-color: transparent;
 }
 .landing-page-product-card {
-  height: 100%;
-  max-height: 506px;
+  /* height: 100%; */
+  height: 506px;
   padding: 25px;
   border-radius: 16px;
   border: 1.5px solid #282d45;
@@ -608,6 +608,12 @@ button:focus-visible {
   line-height: normal;
   background: #020724;
 }
+@media screen and (max-width: 640px) {
+  .portfolio-btn {
+    padding: 8px 16px !important;
+    font-size: 16px !important;
+  }
+}
 .technology {
   font-family: Satoshi;
   font-size: 52px;
@@ -630,8 +636,8 @@ button:focus-visible {
 }
 .tecknology-btn-1,
 .tecknology-btn-2 {
-  padding: 16px 32px;
-  border-radius: 16px;
+  padding: 16px 32px !important;
+  border-radius: 16px !important;
   font-family: Satoshi;
   font-size: 24px;
   font-style: normal;
@@ -640,10 +646,8 @@ button:focus-visible {
 }
 
 .tecknology-btn-1 {
-  border-radius: 16px !important;
-  background: #6306b2 !important;
+  background-color: #6306b2 !important;
   color: #fff !important;
-  padding: 16px 32px !important;
 }
 
 .tecknology-btn-2 {
@@ -654,10 +658,13 @@ button:focus-visible {
 
 /* Adjustments for small screens */
 @media screen and (max-width: 640px) {
-  .tecknology-btn-1,
   .tecknology-btn-2 {
-    padding: 8px 16px;
-    font-size: 16px;
+    padding: 8px 16px !important;
+    font-size: 16px !important;
+  }
+  .tecknology-btn-1 {
+    padding: 8px 16px !important;
+    font-size: 16px !important;
   }
 }
 .landing-page-services-card {
@@ -693,7 +700,7 @@ button:focus-visible {
 .browse-section-card {
   width: 100%;
   max-width: 1280px;
-  padding: 52px;
+  padding: 35px;
   border-radius: 32px;
   border: 1px solid #282d45;
   background: #0e1330;
@@ -733,12 +740,18 @@ button:focus-visible {
   font-weight: 500;
   line-height: normal;
 }
+@media screen and (max-width: 640px) {
+  .browse-col-1-btn {
+    padding: 8px 16px !important;
+    font-size: 16px !important;
+  }
+}
 .browse-col-box-3 {
   width: 100%;
   max-width: 572px;
   height: 100%;
   max-height: 363px;
-  padding: 28px 28px 0px 28px;
+  padding: 18px 18px 0px 18px;
   border-radius: 16px;
   border: 1px solid #282d45;
   background: #060b27;

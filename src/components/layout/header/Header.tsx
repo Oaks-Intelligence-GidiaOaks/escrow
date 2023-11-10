@@ -6,16 +6,11 @@ import { logo, moon, sun } from "../../../assets";
 import { useTheme } from "../../../theme/useTheme";
 import { NavLink } from "react-router-dom";
 import { useClickAway } from "react-use";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Header = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   const [isOpen, setOpen] = useState(false);
   const ref = useRef(null);
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   useClickAway(ref, () => setOpen(false));
   const routes = [
@@ -43,9 +38,7 @@ const Header = () => {
 
   return (
     <div className="">
-      <div
-        className="flex justify-between items-center w-full pb-8"
-      >
+      <div className="flex justify-between items-center w-full pb-8">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="logo" />
           <div className="title title-light">Escrow-Tech</div>

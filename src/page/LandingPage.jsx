@@ -76,8 +76,12 @@ const LandingPage = () => {
                   <img src={product_1_light} alt="" />
                 </div>
                 <div className="img-text pt-5">
-                  <p className="img-product-head">Carbon Credit Management</p>
-                  <p className="img-product-title">System: Carbonible</p>
+                  <p className="img-product-head text-base md:text-lg">
+                    Carbon Credit Management
+                  </p>
+                  <p className="img-product-title text-base md:text-base">
+                    System: Carbonible
+                  </p>
                   <p className="img-product-text pt-4 text-base md:text-sm sm:text-xs">
                     Empowering Organizations to attain sustainability goals and
                     fulfil their corporate responsibility. Initiate projects for
@@ -102,8 +106,12 @@ const LandingPage = () => {
                   <img src={product_2_light} alt="" />
                 </div>
                 <div className="img-text pt-5">
-                  <p className="img-product-head">Sustainable Home Retrofit</p>
-                  <p className="img-product-title">Platform: Carbon-Adjust</p>
+                  <p className="img-product-head text-base md:text-lg">
+                    Sustainable Home Retrofit
+                  </p>
+                  <p className="img-product-title text-base md:text-base">
+                    Platform: Carbon-Adjust
+                  </p>
                   <p className="img-product-text pt-4 text-base md:text-sm sm:text-xs">
                     Bridging the gap between homeowners, financials institutions
                     and retrofitters to enable br homeowners access loans to go
@@ -126,8 +134,12 @@ const LandingPage = () => {
                   <img src={product_3_light} alt="" />
                 </div>
                 <div className="img-text pt-5">
-                  <p className="img-product-head">Categorize, Quantify GHG</p>
-                  <p className="img-product-title">Emissions: Carbosense</p>
+                  <p className="img-product-head text-base md:text-lg">
+                    Categorize, Quantify GHG
+                  </p>
+                  <p className="img-product-title text-base md:text-base">
+                    Emissions: Carbosense
+                  </p>
                   <p className="img-product-text pt-4 text-base md:text-sm sm:text-xs">
                     Get reports on your greenhouse gas emissions, allowing you
                     to gain valuable insights into your environmental impact.
@@ -198,12 +210,16 @@ const LandingPage = () => {
             inViewTransitionTime={0.8}
           >
             <div className="flex justify-center items-center gap-x-6 text-center py-8">
-              <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
-                Learn More
-              </button>
-              <button className="tecknology-btn-2 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
-                Explore Products
-              </button>
+              <Link to={"/about"}>
+                <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
+                  Learn More
+                </button>
+              </Link>
+              <Link to={"/portfolio"}>
+                <button className="tecknology-btn-2 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
+                  Explore Products
+                </button>
+              </Link>
             </div>
           </ScrollEffect>
           <ScrollEffect
@@ -261,7 +277,7 @@ const LandingPage = () => {
                     inViewDelay={0.2}
                     inViewTransitionTime={0.8}
                   >
-                    <p className="browse-heading pb-5 ">
+                    <p className="browse-heading pb-5 text-base md:text-xl">
                       Using Technology to Foster Sustainability
                     </p>
                   </ScrollEffect>
@@ -290,9 +306,11 @@ const LandingPage = () => {
                     inViewDelay={0.6}
                     inViewTransitionTime={0.8}
                   >
-                    <button className="browse-col-1-btn text-sm lg:px-8 lg:py-4 lg:text-xl">
-                      Browse Products
-                    </button>
+                    <Link to={"/portfolio"}>
+                      <button className="browse-col-1-btn text-sm lg:px-8 lg:py-4 lg:text-xl">
+                        Browse Products
+                      </button>
+                    </Link>
                   </ScrollEffect>
                 </div>
                 <div className="browse-col-2">
@@ -485,7 +503,7 @@ const LandingPage = () => {
         </Container>
       </section>
 
-      <section className="landing-page-sections globe-white flex justify-center items-center ">
+      <section className="landing-page-sections globe-white flex justify-center items-center">
         <ScrollEffect
           inViewProperties={{
             opacity: [0, 1],

@@ -26,7 +26,7 @@ function Footer() {
         <Container>
           <div
             className="grid grid-flow-row md:grid-flow-col grid-cols-1 md:grid-cols-12 justify-center pt-10 pb-6 gap-y-4"
-            data-aos="flip-down"
+            data-aos="fade-down"
             data-aos-duration="1000"
           >
             <div className="text-center py-2 col-span-12 md:col-span-3 md:text-left">
@@ -36,13 +36,13 @@ function Footer() {
                 className="pb-2 mx-auto block md:mx-0 md:inline"
               />
               <p className="footer-header pb-8 mb-5">Escrow-Tech</p>
-              <a href="#" className="footer-quote mb-5">
+              <Link to="/contact" className="footer-quote mb-5">
                 Get a quote
-              </a>
+              </Link>
             </div>
             <div className="text-center py-2 col-span-12 md:col-span-3 md:text-left">
               <p className="footer-head pb-2">Company</p>
-              <Link to="#" className="footer-links pb-1">
+              <Link to="/about" className="footer-links pb-1">
                 About Us
               </Link>
               <br />
@@ -60,15 +60,15 @@ function Footer() {
             </div>
             <div className="text-center py-2 col-span-12 md:col-span-3 md:text-left">
               <p className="footer-head pb-2">Quick Links</p>
-              <Link to="#" className="footer-links pb-1">
+              <Link to="/" className="footer-links pb-1">
                 Home
               </Link>
               <br />
-              <Link to="#" className="footer-links pb-1">
+              <Link to="/services" className="footer-links pb-1">
                 Services
               </Link>
               <br />
-              <Link to="#" className="footer-links pb-1">
+              <Link to="/contact" className="footer-links pb-1">
                 Contact
               </Link>
               <br />
