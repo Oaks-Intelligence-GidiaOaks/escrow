@@ -1,8 +1,8 @@
 import {
-  product_1,
-  product_2,
-  product_3,
-  dashboard,
+  // product_1,
+  // product_2,
+  // product_3,
+  // dashboard,
   browse_img_1,
   browse_img_2,
   browse_img_3,
@@ -27,7 +27,7 @@ import { Footer, Hero } from "../components";
 // import { product_1, product_2, product_3, dashboard } from "../assets";
 import Container from "../components/layout/container/Container";
 import Carousel from "../components/layout/carousel/Carousel";
-import { hero } from "../assets";
+// import { hero } from "../assets";
 import { useTheme } from "../theme/useTheme";
 import AOS from "aos";
 import "aos/dist/aos.css";
