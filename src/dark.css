@@ -608,7 +608,7 @@ button:focus-visible {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background: #020724;
+  background-color: #020724;
 }
 @media screen and (max-width: 640px) {
   .portfolio-btn {
@@ -734,7 +734,7 @@ button:focus-visible {
   padding: 16px 32px;
   border-radius: 16px;
   border: 1px solid #5c00e7;
-  background: #0e1330;
+  background-color: #0e1330;
   color: #fff;
   font-family: Satoshi;
   font-size: 24px;
@@ -917,4 +917,17 @@ button:focus-visible {
   .link-text {
     color: #fff !important;
   }
+}
+
+.primary:hover {
+  background-color: #020724 !important;
+  color: #fff !important;
+  border: 1px solid #5c00e7 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.secondary:hover {
+  background-color: #6306b2 !important;
+  color: #fff !important;
+  border: 1px solid #020724 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

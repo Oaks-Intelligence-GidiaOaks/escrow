@@ -3,7 +3,7 @@ import { Container, Header } from "../../../layout";
 // import "./hero.css";
 import Marquee from "react-fast-marquee";
 import { mfive, mfour, mone, mthree, mtwo } from "../../../../assets";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ScrollEffect from "../../../../animation/ScrollEffect";
 
 const Hero = ({ title, text, image = "", imageComponent: Image }) => {
@@ -53,12 +53,18 @@ const Hero = ({ title, text, image = "", imageComponent: Image }) => {
                 inViewTransitionTime={0.7}
               >
                 <div className="w-full flex justify-start items-center gap-x-6 text-center py-8">
-                  <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
+                  <Link
+                    className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl primary"
+                    to={"/contact"}
+                  >
                     Get Started
-                  </button>
-                  <button className="tecknology-btn-2 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
+                  </Link>
+                  <Link
+                    className="tecknology-btn-2 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl secondary"
+                    to={"about"}
+                  >
                     Learn More
-                  </button>
+                  </Link>
                 </div>
               </ScrollEffect>
             )}

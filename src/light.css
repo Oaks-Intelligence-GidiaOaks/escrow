@@ -592,13 +592,12 @@ button:focus-visible {
   padding: 16px 32px;
   border-radius: 16px;
   border: 1px solid #5c00e7;
-  color: #fff;
   font-family: Satoshi;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background: #fff;
+  background-color: #fff !important;
   color: #5c00e7;
 }
 @media screen and (max-width: 640px) {
@@ -651,8 +650,8 @@ button:focus-visible {
 
 .tecknology-btn-2 {
   border: 1px solid #5c00e7;
-  color: #fff;
-  background-color: #020724;
+  color: #5c00e7;
+  background-color: #fff;
 }
 
 /* Adjustments for small screens */
@@ -735,7 +734,7 @@ button:focus-visible {
   padding: 16px 32px;
   border-radius: 16px;
   border: 1px solid #5c00e7;
-  background: #fff;
+  background-color: #fff;
   color: #6306b2;
   font-family: Satoshi;
   font-size: 24px;
@@ -973,4 +972,16 @@ button:focus-visible {
   .hiddenn {
     display: block;
   }
+}
+
+.primary:hover {
+  background-color: #6306b2 !important;
+  color: #fff !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary:hover {
+  background-color: #020724 !important;
+  color: #fff !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

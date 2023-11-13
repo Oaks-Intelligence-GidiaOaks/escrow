@@ -14,6 +14,7 @@ import {
 import { Hero } from "../components";
 import Container from "../components/layout/container/Container";
 import { useTheme } from "../theme/useTheme";
+import ScrollEffect from "../animation/ScrollEffect";
 
 const AboutPage = () => {
   const { isDarkMode } = useTheme();
@@ -37,28 +38,39 @@ const AboutPage = () => {
                 >
                   Who we are
                 </p>
-                <p
-                  className="about-card-text pt-4"
-                  // data-aos="flip-left"
-                  // data-aos-duration="1000"
+
+                <ScrollEffect
+                  inViewProperties={{
+                    y: [30, 0],
+                    opacity: [0, 1],
+                  }}
+                  inViewDelay={0.2}
+                  inViewTransitionTime={0.8}
                 >
-                  Escrow-Tech is an innovative company that is revolutionizing
-                  the way businesses approach problem-solving. Our team of
-                  experts specializes in delivering bespoke solutions to a
-                  diverse range of industries including infrastructure,
-                  financial services, energy, data centres, agriculture, and
-                  supply chain. <br /> At Escrow-Tech, we leverage digital tools
-                  such as artificial intelligence, deep learning, natural
-                  language processing, and image recognition to provide
-                  customized solutions to complex problems faced by our clients.
-                  Our team comprises industry leaders with years of experience
-                  in their respective fields, and we take a personalized
-                  approach to problem-solving, tailored to each client&apos;s
-                  specific needs. Whether you&apos;re in need of infrastructure
-                  solutions, financial services, energy solutions, data centre
-                  solutions, agricultural solutions, or supply chain solutions,
-                  we&apos;re here to help you achieve success.
-                </p>
+                  <p
+                    className="about-card-text pt-4"
+                    // data-aos="flip-left"
+                    // data-aos-duration="1000"
+                  >
+                    Escrow-Tech is an innovative company that is revolutionizing
+                    the way businesses approach problem-solving. Our team of
+                    experts specializes in delivering bespoke solutions to a
+                    diverse range of industries including infrastructure,
+                    financial services, energy, data centres, agriculture, and
+                    supply chain. <br /> At Escrow-Tech, we leverage digital
+                    tools such as artificial intelligence, deep learning,
+                    natural language processing, and image recognition to
+                    provide customized solutions to complex problems faced by
+                    our clients. Our team comprises industry leaders with years
+                    of experience in their respective fields, and we take a
+                    personalized approach to problem-solving, tailored to each
+                    client&apos;s specific needs. Whether you&apos;re in need of
+                    infrastructure solutions, financial services, energy
+                    solutions, data centre solutions, agricultural solutions, or
+                    supply chain solutions, we&apos;re here to help you achieve
+                    success.
+                  </p>
+                </ScrollEffect>
                 <div className="absolute bottom-0 right-0">
                   <img
                     src={isDarkMode ? logo_black_big : logo_black_big_light}
@@ -82,19 +94,28 @@ const AboutPage = () => {
                   <img src={task} alt="task" />
                   <p className="about-card-head px-3">Our Plan</p>
                 </div>
-                <p
-                  className="about-card-text pt-4"
-                  // data-aos="flip-left"
-                  // data-aos-duration="1000"
+                <ScrollEffect
+                  inViewProperties={{
+                    y: [30, 0],
+                    opacity: [0, 1],
+                  }}
+                  inViewDelay={0.2}
+                  inViewTransitionTime={0.8}
                 >
-                  The company&apos;s sustainability plan focuses on measuring,
-                  reporting, and reducing carbon footprint across all emission
-                  scopes. They adhere to ISO 14064 standards and have a
-                  comprehensive carbon emission reduction plan. They have a
-                  reporting guidance document and a carbon emission reporting
-                  form to ensure accurate measurement and reporting of all
-                  relevant emissions
-                </p>
+                  <p
+                    className="about-card-text pt-4"
+                    // data-aos="flip-left"
+                    // data-aos-duration="1000"
+                  >
+                    The company&apos;s sustainability plan focuses on measuring,
+                    reporting, and reducing carbon footprint across all emission
+                    scopes. They adhere to ISO 14064 standards and have a
+                    comprehensive carbon emission reduction plan. They have a
+                    reporting guidance document and a carbon emission reporting
+                    form to ensure accurate measurement and reporting of all
+                    relevant emissions
+                  </p>
+                </ScrollEffect>
                 <div className="absolute bottom-0 right-0">
                   <img
                     src={task_big}
@@ -118,19 +139,28 @@ const AboutPage = () => {
                   <img src={research} alt="task" />
                   <p className="about-card-head px-3">Research</p>
                 </div>
-                <p
-                  className="about-card-text pt-4"
-                  // data-aos="flip-left"
-                  // data-aos-duration="1000"
+                <ScrollEffect
+                  inViewProperties={{
+                    y: [30, 0],
+                    opacity: [0, 1],
+                  }}
+                  inViewDelay={0.2}
+                  inViewTransitionTime={0.8}
                 >
-                  We understand that achieving net-zero emissions requires more
-                  than just measurement and reporting. That&apos;s why we are
-                  actively exploring innovative solutions to reduce our
-                  emissions across all areas of our operations. From investing
-                  in renewable energy sources to optimizing our supply chain, we
-                  are committed to finding practical and effective ways to
-                  reduce our carbon footprint.
-                </p>
+                  <p
+                    className="about-card-text pt-4"
+                    // data-aos="flip-left"
+                    // data-aos-duration="1000"
+                  >
+                    We understand that achieving net-zero emissions requires
+                    more than just measurement and reporting. That&apos;s why we
+                    are actively exploring innovative solutions to reduce our
+                    emissions across all areas of our operations. From investing
+                    in renewable energy sources to optimizing our supply chain,
+                    we are committed to finding practical and effective ways to
+                    reduce our carbon footprint.
+                  </p>
+                </ScrollEffect>
                 <div className="absolute bottom-0 right-0">
                   <img
                     src={research_big}
@@ -154,20 +184,29 @@ const AboutPage = () => {
                   <img src={next} alt="task" />
                   <p className="about-card-head px-3">Next Steps</p>
                 </div>
-                <p
-                  className="about-card-text pt-4 pb-5"
-                  // data-aos="flip-left"
-                  // data-aos-duration="1000"
+                <ScrollEffect
+                  inViewProperties={{
+                    y: [30, 0],
+                    opacity: [0, 1],
+                  }}
+                  inViewDelay={0.2}
+                  inViewTransitionTime={0.8}
                 >
-                  As we move forward on this journey towards sustainability, we
-                  are committed to keeping our stakeholders informed about our
-                  progress. We will be regularly reporting our carbon footprint
-                  and any carbon credits earned or purchased for offset
-                  purposes. We invite you to join us on this journey and play
-                  your part in securing a better future for our planet.
-                  Together, we can make a positive impact and ensure a
-                  sustainable future for all.
-                </p>
+                  <p
+                    className="about-card-text pt-4 pb-5"
+                    // data-aos="flip-left"
+                    // data-aos-duration="1000"
+                  >
+                    As we move forward on this journey towards sustainability,
+                    we are committed to keeping our stakeholders informed about
+                    our progress. We will be regularly reporting our carbon
+                    footprint and any carbon credits earned or purchased for
+                    offset purposes. We invite you to join us on this journey
+                    and play your part in securing a better future for our
+                    planet. Together, we can make a positive impact and ensure a
+                    sustainable future for all.
+                  </p>
+                </ScrollEffect>
                 <div className="absolute bottom-0 right-0">
                   <img
                     src={next_big}

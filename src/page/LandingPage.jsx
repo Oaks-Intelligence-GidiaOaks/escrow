@@ -148,7 +148,7 @@ const LandingPage = () => {
 
           <div className="pt-5 pb-12 flex justify-center items-center">
             <Link to={"/portfolio"}>
-              <button className="portfolio-btn text-sm lg:px-8 lg:py-4 lg:text-xl">
+              <button className="portfolio-btn text-sm lg:px-8 lg:py-4 lg:text-xl secondary">
                 Browse Portfolio
               </button>
             </Link>
@@ -205,12 +205,12 @@ const LandingPage = () => {
           >
             <div className="flex justify-center items-center gap-x-6 text-center py-8">
               <Link to={"/about"}>
-                <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
+                <button className="tecknology-btn-1 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl primary">
                   Learn More
                 </button>
               </Link>
               <Link to={"/portfolio"}>
-                <button className="tecknology-btn-2 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl">
+                <button className="tecknology-btn-2 px-2 py-1 text-sm lg:px-8 lg:py-4 lg:text-xl secondary">
                   Explore Products
                 </button>
               </Link>
@@ -301,7 +301,7 @@ const LandingPage = () => {
                     inViewTransitionTime={0.8}
                   >
                     <Link to={"/portfolio"}>
-                      <button className="browse-col-1-btn text-sm lg:px-8 lg:py-4 lg:text-xl">
+                      <button className="browse-col-1-btn text-sm lg:px-8 lg:py-4 lg:text-xl secondary">
                         Browse Products
                       </button>
                     </Link>
