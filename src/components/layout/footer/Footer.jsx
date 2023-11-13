@@ -78,21 +78,10 @@ function Footer() {
             </div>
             <div className="text-center py-2 col-span-12 md:col-span-3 md:text-left">
               <p className="footer-head pb-2">Specialization</p>
-              <Link to="#" className="footer-links pb-1">
-                Artificial Intelligence
-              </Link>
-              <br />
-              <Link to="#" className="footer-links pb-1">
-                Deep Learning
-              </Link>
-              <br />
-              <Link to="#" className="footer-links pb-1">
-                Natural Language processing
-              </Link>
-              <br />
-              <Link to="#" className="footer-links pb-1">
-                Image Recognition
-              </Link>
+              <p className="footer-links">Artificial Intelligence</p>
+              <p className="footer-links">Deep Learning</p>
+              <p className="footer-links">Natural Language processing</p>
+              <p className="footer-links">Image Recognition</p>
             </div>
           </div>
           <div className="flex justify-between items-center pt-5 pb-5">
