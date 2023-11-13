@@ -47,10 +47,10 @@ function Footer() {
               <Link to="#" className="footer-links pb-1">
                 Privacy Policy
               </Link>
-              <br />
-              <Link to="#" className="footer-links pb-1">
+              {/* <br /> */}
+              {/* <Link to="#" className="footer-links pb-1">
                 Careers
-              </Link>
+              </Link> */}
             </div>
             <div className="text-center py-2 col-span-12 md:col-span-3 md:text-left">
               <p className="footer-head pb-2">Quick Links</p>
