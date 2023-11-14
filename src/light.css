@@ -104,6 +104,17 @@
   --tecknology-btn-2-bg: #020724;
   --landing-page-services-card-b: #282d45;
   --landing-page-services-card-bg: rgba(14, 19, 48, 0.3);
+  --img-services-text-color: #c4cad6;
+  --services-title-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --browse-section-card-b: #282d45;
+  --browse-section-card-bg: #0e1330;
+  --browse-heading-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --browse-subtitle: #8f9bb7;
+  --browse-col-1-btn-b: #5c00e7;
+  --browse-col-1-btn-bg: #0e1330;
+  --browse-col-1-btn-color: #fff;
+  --browse-col-box-3-b: #282d45;
+  --browse-col-box-3-bg: #060b27;
 }
 
 html {

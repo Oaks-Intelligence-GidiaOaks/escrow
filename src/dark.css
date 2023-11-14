@@ -103,6 +103,17 @@
   --tecknology-btn-2-bg: #020724;
   --landing-page-services-card-b: #282d45;
   --landing-page-services-card-bg: rgba(14, 19, 48, 0.3);
+  --img-services-text-color: #c4cad6;
+  --services-title-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --browse-section-card-b: #282d45;
+  --browse-section-card-bg: #0e1330;
+  --browse-heading-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --browse-subtitle: #8f9bb7;
+  --browse-col-1-btn-b: #5c00e7;
+  --browse-col-1-btn-bg: #0e1330;
+  --browse-col-1-btn-color: #fff;
+  --browse-col-box-3-b: #282d45;
+  --browse-col-box-3-bg: #060b27;
 }
 body.light-mode {
   --bg-color: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
@@ -730,7 +741,7 @@ html {
   background: var(--landing-page-services-card-bg);
 }
 .img-services-text {
-  color: #c4cad6;
+  color: var(--img-services-text-color);
   font-family: Satoshi;
   font-size: 16px;
   font-style: normal;
@@ -746,7 +757,7 @@ html {
   font-weight: 500;
   line-height: 130%;
   letter-spacing: -0.72px;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--services-title-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -756,8 +767,8 @@ html {
   max-width: 1280px;
   padding: 35px;
   border-radius: 32px;
-  border: 1px solid #282d45;
-  background: #0e1330;
+  border: 1px solid var(--browse-section-card-bg);
+  background: var(--browse-section-card-bg);
 }
 .browse-heading {
   font-family: Satoshi;
@@ -765,13 +776,13 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--browse-heading-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .browse-subtitle {
-  color: #8f9bb7;
+  color: var(--browse-subtitle);
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -785,9 +796,9 @@ html {
 .browse-col-1-btn {
   padding: 16px 32px;
   border-radius: 16px;
-  border: 1px solid #5c00e7;
-  background-color: #0e1330;
-  color: #fff;
+  border: 1px solid var(--browse-col-1-btn-b);
+  background-color: var(--browse-col-1-btn-bg);
+  color: var(--browse-col-1-btn-color);
   font-family: Satoshi;
   font-size: 24px;
   font-style: normal;
@@ -807,8 +818,8 @@ html {
   max-height: 363px;
   padding: 18px 18px 0px 18px;
   border-radius: 16px;
-  border: 1px solid #282d45;
-  background: #060b27;
+  border: 1px solid var(--browse-col-box-3-b);
+  background: var(--browse-col-box-3-bg);
 }
 .browse-col-head {
   color: #f6f6f7;
