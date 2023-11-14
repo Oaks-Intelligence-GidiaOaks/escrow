@@ -25,67 +25,45 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  /* variable */
+  --bg-color: linear-gradient(180deg, #2d1573 0%, #060b27 100%);
+  --hero-text: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --text: #fff;
+  --btn-border: #6306b2;
+  --btn-text: #c4cad6;
+  --title-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --bg: linear-gradient(to right, #020724 25%, #250b4a 50%, #020724 70%);
+  --footer-bg: linear-gradient(to right, #020724 25%, #250b4a 50%, #020724 70%);
+  --foot_hd-text: #f6f6f7;
+  --foot-quote-hover: #3c88e7;
+  --footer-head: #f6f6f7;
+  --footer-links-hover: #c4cad6;
+  --copyright: #c4cad6;
+  --contact-form-bg: #060b27;
+  --form-box-border: #282d45;
+  --form-box-bg: #0e1330;
+  --contact-card-border: #282d45;
+  --contact-card-bg: #0e1330;
+  --contact-card-icon-bg: rgba(255, 255, 255, 0.05);
+  --contact-card-icon-bs: rgba(255, 255, 255, 0.32);
+  --contact-card-icon-head: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --contact-card-icon-title-clor: #c4cad6;
+  --card-form-head-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --card-form-title-color: #c4cad6;
+  --contact-form-label-color: #c4cad6;
+  --contact-form-input-bb: #7c8ba8;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Satoshi", sans-serif;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+body.dark-theme {
 }
 
 .hero {
-  background: #f7f9f9;
+  background: var(--bg-white);
 }
 .hero_text {
   background: #232323;
