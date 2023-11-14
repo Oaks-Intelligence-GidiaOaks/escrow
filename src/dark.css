@@ -822,7 +822,7 @@ html {
   background: var(--browse-col-box-3-bg);
 }
 .browse-col-head {
-  color: #f6f6f7;
+  color: var(--browse-col-head-color);
   font-family: Satoshi;
   font-size: 24px;
   font-style: normal;
@@ -831,7 +831,7 @@ html {
   letter-spacing: -0.72px;
 }
 .browse-col-text {
-  color: #8f9bb7;
+  color: var(--browse-col-text-color);
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -840,7 +840,7 @@ html {
 }
 .browse-box {
   border-radius: 10px 10px 0px 0px;
-  background: #0e1330;
+  background: var(--browse-box-bg);
   width: 100%;
   max-width: 417px;
   height: 100%;
@@ -852,7 +852,7 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--vision-heading-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -863,13 +863,13 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--vision-subtitle-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .vision-lead {
-  color: #c4cad6;
+  color: var(--vision-lead-color);
   font-family: Satoshi;
   font-size: 16px;
   font-style: normal;
@@ -883,7 +883,7 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--global-head-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -895,13 +895,13 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--global-heading-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .global-subtitle {
-  color: #8f9bb7;
+  color: var(--global-subtitle-color);
   text-align: center;
   font-family: Inter;
   font-size: 16px;
@@ -919,7 +919,7 @@ html {
   max-width: 1280px;
   padding: 52px;
   border-radius: 60px;
-  background: #0e1330;
+  background: var(--mission-section-card-bg);
 }
 .mission-head {
   font-family: Satoshi;
@@ -927,14 +927,14 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--mission-head-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
 .mission-subtitle {
-  color: #c4cad6;
+  color: var(--mission-subtitle-color);
   font-family: Satoshi;
   font-size: 18px;
   font-style: normal;
@@ -955,7 +955,7 @@ html {
   }
 }
 .text-hero {
-  color: #c4cad6;
+  color: var(--text-hero-color);
   font-family: Satoshi;
   font-size: 24px;
   font-style: normal;
@@ -970,7 +970,7 @@ html {
     display: block;
   }
   .box-menu {
-    background: linear-gradient(180deg, #2d1573 0%, #060b27 100%);
+    background: var(--box-menu-bg-media);
     height: 90%;
   }
   .mobile-nav {
@@ -978,19 +978,19 @@ html {
     padding: 1.5rem;
   }
   .link-text {
-    color: #fff !important;
+    color: var(--link-text-color) !important;
   }
 }
 
 .primary:hover {
-  background-color: #020724 !important;
-  color: #fff !important;
-  border: 1px solid #5c00e7 !important;
+  background-color: var(--primary-hover-bg) !important;
+  color: var(--primary-hover-color) !important;
+  border: 1px solid var(--primary-hover-b) !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .secondary:hover {
-  background-color: #6306b2 !important;
-  color: #fff !important;
-  border: 1px solid #020724 !important;
+  background-color: var(--secondary-hover-bg) !important;
+  color: var(--secondary-hover-color) !important;
+  border: 1px solid var(--secondary-hover-b) !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
