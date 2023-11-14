@@ -114,6 +114,27 @@
   --browse-col-1-btn-color: #fff;
   --browse-col-box-3-b: #282d45;
   --browse-col-box-3-bg: #060b27;
+  --browse-col-head-color: #f6f6f7;
+  --browse-col-text-color: #8f9bb7;
+  --browse-box-bg: #0e1330;
+  --vision-heading-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --vision-subtitle-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --vision-lead-color: #c4cad6;
+  --global-head-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --global-heading-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --global-subtitle-color: #8f9bb7;
+  --mission-section-card-bg: #0e1330;
+  --mission-head-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --mission-subtitle-color: #c4cad6;
+  --text-hero-color: #c4cad6;
+  --box-menu-bg-media: linear-gradient(180deg, #2d1573 0%, #060b27 100%);
+  --link-text-color: #fff;
+  --primary-hover-color: #fff;
+  --primary-hover-b: #5c00e7;
+  --primary-hover-bg: #020724;
+  --secondary-hover-color: #fff;
+  --secondary-hover-b: #020724;
+  --secondary-hover-bg: #6306b2;
 }
 body.light-mode {
   --bg-color: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
