@@ -25,7 +25,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
   /* variable */
   --bg-color: linear-gradient(180deg, #2d1573 0%, #060b27 100%);
   --hero-text: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
@@ -87,6 +86,23 @@
   --services-box-head-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
   --services-box-text-color: #c4cad6;
   --landing-page-sections-color: #060b27;
+  --landing-page-products-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --landing-page-product-card-b: rgba(14, 19, 48, 0.3);
+  --img-product-head: #f6f6f7;
+  --img-product-title-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --img-product-text-color: #c4cad6;
+  --portfolio-btn-b: #5c00e7;
+  --portfolio-btn-color: #fff;
+  --portfolio-btn-bg: #020724;
+  --technology-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --technology-title-color: #c4cad6;
+  --tecknology-btn-1-bg: #6306b2;
+  --tecknology-btn-1-color: #fff;
+  --tecknology-btn-2-b: #5c00e7;
+  --tecknology-btn-2-color: #fff;
+  --tecknology-btn-2-bg: #020724;
+  --landing-page-services-card-b: #282d45;
+  --landing-page-services-card-bg: rgba(14, 19, 48, 0.3);
 }
 body.light-mode {
   --bg-color: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
@@ -590,7 +606,7 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--landing-page-products-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -601,7 +617,7 @@ html {
   padding: 25px;
   border-radius: 16px;
   border: 1.5px solid #282d45;
-  background: rgba(14, 19, 48, 0.3);
+  background: var(--landing-page-product-card-b);
 }
 .img-product-head {
   font-family: Satoshi;
@@ -609,7 +625,7 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  background: #f6f6f7;
+  background: var(--img-product-head);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -620,13 +636,13 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--img-product-title-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .img-product-text {
-  color: #c4cad6;
+  color: var(--img-product-text-color);
   font-family: Satoshi;
   font-size: 16px;
   font-style: normal;
@@ -637,14 +653,14 @@ html {
 .portfolio-btn {
   padding: 16px 32px;
   border-radius: 16px;
-  border: 1px solid #5c00e7;
-  color: #fff;
+  border: 1px solid var(--portfolio-btn-b);
+  color: var(--portfolio-btn-color);
   font-family: Satoshi;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background-color: #020724;
+  background-color: var(--portfolio-btn-bg);
 }
 @media screen and (max-width: 640px) {
   .portfolio-btn {
@@ -658,13 +674,13 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--technology-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .technology-title {
-  color: #c4cad6;
+  color: var(--technology-title-color);
   text-align: center;
   font-family: Satoshi;
   font-size: 16px;
@@ -684,14 +700,14 @@ html {
 }
 
 .tecknology-btn-1 {
-  background-color: #6306b2 !important;
-  color: #fff !important;
+  background-color: var(--tecknology-btn-1) !important;
+  color: var(--tecknology-btn-1-color) !important;
 }
 
 .tecknology-btn-2 {
-  border: 1px solid #5c00e7;
-  color: #fff;
-  background-color: #020724;
+  border: 1px solid var(--tecknology-btn-2-b);
+  color: var(--tecknology-btn-2-color);
+  background-color: var(--tecknology-btn-2-bg);
 }
 
 /* Adjustments for small screens */
@@ -710,8 +726,8 @@ html {
   max-width: 624px;
   padding: 28px;
   border-radius: 32px;
-  border: 1px solid #282d45;
-  background: rgba(14, 19, 48, 0.3);
+  border: 1px solid var(--landing-page-services-card-b);
+  background: var(--landing-page-services-card-bg);
 }
 .img-services-text {
   color: #c4cad6;
