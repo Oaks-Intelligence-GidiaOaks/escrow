@@ -307,9 +307,9 @@ html {
   align-items: center;
   border-radius: 8px;
   border-bottom: 1px solid var(--contact-form-input-bb);
-  background: #070c28;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  color: #c4cad6;
+  background: var(--contact-form-input-bg);
+  box-shadow: 0px 1px 2px 0px var(--contact-form-input-bs);
+  color: var(--contact-form-input-color);
   font-family: Open Sans;
   font-size: 16px;
   font-style: normal;
@@ -320,10 +320,10 @@ html {
   height: 219px;
   padding: 12px 16px;
   border-radius: 8px;
-  border-bottom: 1px solid #7c8ba8;
-  background: #070c28;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  color: #c4cad6;
+  border-bottom: 1px solid var(--contact-form-textarea-bb);
+  background: var(--contact-form-textarea-bg);
+  box-shadow: 0px 1px 2px 0px var(--contact-form-textarea-bs);
+  color: var(--contact-form-textarea-color);
   font-family: Open Sans;
   font-size: 16px;
   font-style: normal;
@@ -333,8 +333,8 @@ html {
 .contact-form-submit-btn {
   padding: 16px 32px;
   border-radius: 16px;
-  background: #6306b2;
-  color: #fff;
+  background: var(--contact-form-submit-btn-bg);
+  color: var(--contact-form-submit-btn-color);
   font-family: Satoshi;
   font-size: 24px;
   font-style: normal;
@@ -344,8 +344,8 @@ html {
 .about-card-block {
   padding: 16px 32px;
   border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0e1330;
+  border: 1px solid var(--about-card-block-b);
+  background: var(--about-card-block-bg);
   max-width: 964px;
   position: relative;
 }
@@ -374,14 +374,14 @@ html {
 .about-card-1-block {
   padding: 16px 32px;
   border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0e1330;
+  border: 1px solid var(--about-card-1-block-b);
+  background: var(--about-card-1-block-bg);
   max-width: 1280px;
   position: relative;
 }
 
 .text-gradient {
-  color: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  color: var(--text-gradient-color);
 }
 
 @media (min-width: 640px) {
@@ -411,7 +411,7 @@ html {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--about-card-head-1-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -423,13 +423,13 @@ html {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--about-card-head);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .about-card-text {
-  color: #c4cad6;
+  color: var(--about-card-text-color);
   font-family: Satoshi;
   font-size: 16px;
   font-style: normal;
@@ -441,11 +441,11 @@ html {
   height: 409.271px;
   padding: 44.218px 23.313px 43.28px 44.217px;
   border-radius: 24.556px;
-  border: 1.023px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(0deg, #0e1330 0%, #0e1330 100%), #1d1c20;
+  border: 1.023px solid var(--services-card-box-b);
+  background: var(--services-card-box-bg);
 }
 .services-card-image {
-  fill: linear-gradient(0deg, #0e1330 0%, #0e1330 100%), #1d1c20;
+  fill: var(--services-card-image-fill);
   stroke-width: 1.023px;
   stroke: #282d45;
 }
@@ -455,7 +455,7 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--services-expertise-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -467,13 +467,13 @@ html {
   font-weight: 500;
   line-height: 130%; /* 29.991px */
   letter-spacing: -0.692px;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--services-title-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .services-text {
-  color: #c4cad6;
+  color: var(--services-text-color);
   font-family: Satoshi;
   font-size: 15.38px;
   font-style: normal;
@@ -486,12 +486,12 @@ html {
   padding: 15.38px 144.871px 14.755px 24.035px;
   align-items: center;
   border-radius: 24.556px;
-  border: 1.023px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(0deg, #0e1330 0%, #0e1330 100%), #1d1c20;
-  box-shadow: 0px 7.69006px 13.4576px 0px rgba(0, 0, 0, 0.25);
+  border: 1.023px solid var(--rounded-card-b);
+  background: var(--rounded-card-bg);
+  box-shadow: 0px 7.69006px 13.4576px 0px var(--rounded-card-bs);
 }
 .code-text {
-  color: #c4cad6;
+  color: var(--code-text-color);
   font-family: Satoshi;
   font-size: 14px;
   font-style: normal;
@@ -501,8 +501,8 @@ html {
 
 .services-card-block {
   border-radius: 22px;
-  border: 1.5px solid #282d45;
-  background: #080d2a;
+  border: 1.5px solid var(--services-card-block-b);
+  background: var(--services-card-block-bg);
   width: 100%;
   max-width: 1280px;
   padding: 10px; /* Increased default padding */
@@ -533,13 +533,13 @@ html {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  background: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  background: var(--services-box-head-bg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .services-box-text {
-  color: #c4cad6;
+  color: var(--services-box-text-color);
   font-family: Satoshi;
   font-size: 16px;
   font-style: normal;
@@ -547,7 +547,7 @@ html {
   line-height: normal;
 }
 .landing-page-sections {
-  background: #060b27;
+  background: var(--landing-page-sections-color);
   width: 100vw !important;
 }
 .landing-page-products {
