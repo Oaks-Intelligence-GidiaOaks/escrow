@@ -53,6 +53,40 @@
   --card-form-title-color: #c4cad6;
   --contact-form-label-color: #c4cad6;
   --contact-form-input-bb: #7c8ba8;
+  --contact-form-input-color: #c4cad6;
+  --contact-form-input-bg: #070c28;
+  --contact-form-input-bs: rgba(16, 24, 40, 0.05);
+  --contact-form-textarea-bb: #7c8ba8;
+  --contact-form-textarea-bg: #070c28;
+  --contact-form-textarea-bs: rgba(16, 24, 40, 0.05);
+  --contact-form-textarea-color: #c4cad6;
+  --contact-form-submit-btn-bg: #6306b2;
+  --contact-form-submit-btn-color: #fff;
+  --about-card-block-b: rgba(255, 255, 255, 0.08);
+  --about-card-block-bg: #0e1330;
+  --about-card-1-block-b: rgba(255, 255, 255, 0.08);
+  --about-card-1-block-bg: #0e1330;
+  --text-gradient-color: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --about-card-head-1-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --about-card-head: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --about-card-text-color: #c4cad6;
+  --services-card-box-b: rgba(255, 255, 255, 0.08);
+  --services-card-box-bg: linear-gradient(0deg, #0e1330 0%, #0e1330 100%),
+    #1d1c20;
+  --services-card-image-fill: linear-gradient(0deg, #0e1330 0%, #0e1330 100%),
+    #1d1c20;
+  --services-expertise-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --services-title-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --services-text-color: #c4cad6;
+  --rounded-card-b: rgba(255, 255, 255, 0.08);
+  --rounded-card-bg: linear-gradient(0deg, #0e1330 0%, #0e1330 100%), #1d1c20;
+  --rounded-card-bs: rgba(0, 0, 0, 0.25);
+  --code-text-color: #c4cad6;
+  --services-card-block-b: #282d45;
+  --services-card-block-bg: #080d2a;
+  --services-box-head-bg: linear-gradient(180deg, #f6f6f7 0%, #7e808f 100%);
+  --services-box-text-color: #c4cad6;
+  --landing-page-sections-color: #060b27;
 }
 body.light-mode {
   --bg-color: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
