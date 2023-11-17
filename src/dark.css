@@ -813,7 +813,8 @@ html {
 }
 
 .tecknology-btn-1 {
-  background-color: var(--tecknology-btn-1-bg) !important;
+   background-color: var(--tecknology-btn-1-bg) !important;
+
   color: var(--tecknology-btn-1-color) !important;
 }
 
@@ -1072,10 +1073,6 @@ html {
     display: block;
   }
   .box-menu {
-    background: var(--box-menu-bg-media) !important;
-    height: 90% !important;
-  }
-  #menu {
     background: var(--box-menu-bg-media) !important;
     height: 90% !important;
   }

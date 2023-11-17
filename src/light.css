@@ -1038,10 +1038,6 @@ body.dark-theme {
     background: var(--box-menu-bg-media) !important;
     height: 90% !important;
   }
-  #menu {
-    background: var(--box-menu-bg-media) !important;
-    height: 90% !important;
-  }
   .mobile-nav {
     border-radius: 0.75rem;
     padding: 1.5rem;
