@@ -83,7 +83,8 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -100 }}
               transition={{ duration: 0.3 }}
-              className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-neutral-950 bg-opacity-90 backdrop-blur-md box-menu"
+              className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-90 backdrop-blur-md box-menu"
+              id="menu"
             >
               <motion.div
                 initial={{ scale: 0.5, opacity: 0 }}
@@ -92,7 +93,7 @@ const Header = () => {
                 transition={{ duration: 0.3, delay: 0.2 }}
                 className=" w-full pt-0 border-b border-white/20 shadow-lg rounded-lg box-menu-inner"
               >
-                <ul className="grid gap-2 bg-inherit pt-0">
+                <ul className="grid gap-2 pt-0">
                   {routes.map((route, idx) => (
                     <motion.li
                       initial={{ scale: 0, opacity: 0 }}
@@ -104,7 +105,7 @@ const Header = () => {
                         delay: 0.1 + idx / 10,
                       }}
                       key={route.title}
-                      className="w-full p-[0.08rem] rounded-xl bg-white text-white"
+                      className="w-full p-[0.08rem] rounded-xl text-white"
                     >
                       <NavLink
                         onClick={() => setOpen((prev) => !prev)}

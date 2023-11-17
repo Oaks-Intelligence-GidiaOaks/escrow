@@ -813,7 +813,7 @@ html {
 }
 
 .tecknology-btn-1 {
-  background-color: var(--tecknology-btn-1) !important;
+  background-color: var(--tecknology-btn-1-bg) !important;
   color: var(--tecknology-btn-1-color) !important;
 }
 
@@ -1072,8 +1072,12 @@ html {
     display: block;
   }
   .box-menu {
-    background: var(--box-menu-bg-media);
-    height: 90%;
+    background: var(--box-menu-bg-media) !important;
+    height: 90% !important;
+  }
+  #menu {
+    background: var(--box-menu-bg-media) !important;
+    height: 90% !important;
   }
   .mobile-nav {
     border-radius: 0.75rem;
@@ -1083,6 +1087,7 @@ html {
     color: var(--link-text-color) !important;
   }
 }
+
 
 .primary:hover {
   background-color: var(--primary-hover-bg) !important;

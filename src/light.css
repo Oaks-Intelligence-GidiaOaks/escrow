@@ -1029,9 +1029,25 @@ body.dark-theme {
 .hiddenn {
   display: none;
 }
+
 @media (max-width: 991px) {
   .hiddenn {
     display: block;
+  }
+  .box-menu {
+    background: var(--box-menu-bg-media) !important;
+    height: 90% !important;
+  }
+  #menu {
+    background: var(--box-menu-bg-media) !important;
+    height: 90% !important;
+  }
+  .mobile-nav {
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+  .link-text {
+    color: var(--link-text-color) !important;
   }
 }
 
