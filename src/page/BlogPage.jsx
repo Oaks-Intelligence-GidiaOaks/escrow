@@ -18,7 +18,7 @@ const BlogPage = () => {
 
   useEffect(() => {
     const getPosts = async () => {
-      const data = await getBlogPosts(null, page, sizePerPage);
+      const data = await getBlogPosts();
       console.log(data);
       setBlogPosts(data);
       setTotal(data?.length);

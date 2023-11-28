@@ -7,7 +7,7 @@ const clientConfig = {
   useCdn: false,
 };
 
-export const getBlogPosts = async (searchTitle, page = 1, sizePerPage = 9) => {
+export const getBlogPosts = async (searchTitle, page = 1, pageSize = 9) => {
   const client = createClient(clientConfig);
 
   let query = `*[_type=="post"] | order(_createdAt)`;
@@ -16,9 +16,9 @@ export const getBlogPosts = async (searchTitle, page = 1, sizePerPage = 9) => {
     query = `*[_type=="post" && title match "${searchTitle}"] | order(_createdAt)`;
   }
 
-  const offset = (page - 1) * sizePerPage;
+  const offset = (page - 1) * pageSize;
 
-  query += `[${offset}..${offset + sizePerPage - 1}]`;
+  query += `[${offset}..${offset + pageSize - 1}]`;
 
   return client.fetch(`${query} {
     _id,
