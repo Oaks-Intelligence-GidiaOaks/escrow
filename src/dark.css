@@ -813,7 +813,7 @@ html {
 }
 
 .tecknology-btn-1 {
-  background-color: var(--tecknology-btn-1) !important;
+  background-color: var(--tecknology-btn-1-bg) !important;
   color: var(--tecknology-btn-1-color) !important;
 }
 

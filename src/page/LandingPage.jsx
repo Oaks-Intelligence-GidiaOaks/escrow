@@ -43,7 +43,7 @@ const LandingPage = () => {
       <section className="landing-page-sections">
         <Hero
           title="Simple Solutions to Sustainability"
-          text="Experience innovation like never before with out cutting edge technologies."
+          text="Experience innovation like never before with our cutting edge technologies."
           image={hero_light}
         />
         <Container>
