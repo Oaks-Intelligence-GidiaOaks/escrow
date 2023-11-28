@@ -5,8 +5,18 @@ import {
   AboutPage,
   ServicePage,
   PortfolioPage,
+  BlogPage,
+  SingleBlogPage,
 } from "../page";
-import { CONTACT, LANDING, ABOUT, SERVICES, PORTFOLIO } from "./CONSTANT";
+import {
+  CONTACT,
+  LANDING,
+  ABOUT,
+  SERVICES,
+  PORTFOLIO,
+  BLOG,
+  BLOG_SINGLE,
+} from "./CONSTANT";
 
 const RouterConfig = () => {
   return (
@@ -17,6 +27,8 @@ const RouterConfig = () => {
         <Route path={ABOUT} element={<AboutPage />} />
         <Route path={SERVICES} element={<ServicePage />} />
         <Route path={PORTFOLIO} element={<PortfolioPage />} />
+        <Route path={BLOG} element={<BlogPage />} />
+        <Route path={BLOG_SINGLE} element={<SingleBlogPage />} />
       </Routes>
     </div>
   );

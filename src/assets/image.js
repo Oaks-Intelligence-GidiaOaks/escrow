@@ -109,3 +109,7 @@ export const adtwo_light = `${PATH}/2.svg`;
 export const one = `${PATH}/1.svg`;
 export const three = `${PATH}/3.svg`;
 export const four = `${PATH}/4.svg`;
+export const behance = `${PATH}/behance.svg`;
+export const medium = `${PATH}/medium.svg`;
+export const postImg = `${PATH}/postImg.svg`;
+export const bigcard = `${PATH}/bigCardPost.svg`;

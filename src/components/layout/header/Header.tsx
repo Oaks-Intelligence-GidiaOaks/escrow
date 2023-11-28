@@ -59,6 +59,9 @@ const Header = () => {
           <NavLink to="/contact" className="text">
             Contact
           </NavLink>
+          <NavLink to="/blog" className="text">
+            Blog
+          </NavLink>
         </div>
 
         <div className="btn" onClick={toggleTheme}>

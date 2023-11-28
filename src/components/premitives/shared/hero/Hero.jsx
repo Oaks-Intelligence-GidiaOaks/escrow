@@ -111,7 +111,7 @@ Hero.propTypes = {
   text: PropTypes.string.isRequired,
   button: PropTypes.bool,
   image: PropTypes.element,
-  imageComponent: PropTypes.node.isRequired,
+  imageComponent: PropTypes.node,
 };
 
 export default Hero;
