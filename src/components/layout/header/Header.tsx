@@ -78,7 +78,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="hiddenn pb-5 z-20">
+      <div className="hiddenn pb-5">
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -107,7 +107,7 @@ const Header = () => {
                         delay: 0.1 + idx / 10,
                       }}
                       key={route.title}
-                      className="w-full p-[0.08rem] rounded-xl bg-white text-white"
+                      className="w-full p-[0.08rem] rounded-xl  text-white"
                     >
                       <NavLink
                         onClick={() => setOpen((prev) => !prev)}

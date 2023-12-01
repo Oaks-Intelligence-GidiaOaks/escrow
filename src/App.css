@@ -1199,6 +1199,8 @@ html {
 
 .hiddenn {
   display: none;
+  z-index: 50;
+
 }
 
 @media (max-width: 991px) {
