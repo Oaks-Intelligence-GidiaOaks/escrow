@@ -44,22 +44,22 @@ const Header = () => {
           <div className="title title-light">Escrow-Tech</div>
         </div>
         <div className="flex w-2/5 justify-between links">
-          <NavLink to="/" className="text">
+          <NavLink to="/" className="text-h">
             Home
           </NavLink>
-          <NavLink to="/about" className="text">
+          <NavLink to="/about" className="text-h">
             About
           </NavLink>
-          <NavLink to="/portfolio" className="text">
+          <NavLink to="/portfolio" className="text-h">
             Portfolio
           </NavLink>
-          <NavLink to="/services" className="text">
+          <NavLink to="/services" className="text-h">
             Services
           </NavLink>
-          <NavLink to="/contact" className="text">
+          <NavLink to="/contact" className="text-h">
             Contact
           </NavLink>
-          <NavLink to="/blog" className="text">
+          <NavLink to="/blog" className="text-h">
             Blog
           </NavLink>
         </div>
@@ -78,7 +78,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="hiddenn pb-5">
+      <div className="hiddenn pb-5 z-20">
         <AnimatePresence>
           {isOpen && (
             <motion.div

@@ -88,10 +88,10 @@ const Hero = ({ title, text, image = "", imageComponent: Image }) => {
             }}
             inViewDelay={0.2}
             inViewTransitionTime={0.8}
-            className="w-full lg:w-[60%] flex justify-center items-center"
+            className="w-full flex justify-center items-center overflow-hidden"
           >
-            <div className="lg:w-1/2 w-full flex justify-start max-w-xs">
-              <Marquee className="w-[200px]" autoFill>
+            <div className="w-full flex justify-start">
+              <Marquee className="w-full lg:w-1/2 " autoFill>
                 <img src={mone} className="mx-[30px]" />
                 <img src={mtwo} className="mx-[30px]" />
                 <img src={mthree} className="mx-[30px]" />
