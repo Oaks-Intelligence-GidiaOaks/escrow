@@ -16,7 +16,9 @@ import {
   PORTFOLIO,
   BLOG,
   BLOG_SINGLE,
+  ADMIN,
 } from "./CONSTANT";
+import SanityStudio from "../page/StudioPage";
 
 const RouterConfig = () => {
   return (
@@ -29,6 +31,7 @@ const RouterConfig = () => {
         <Route path={PORTFOLIO} element={<PortfolioPage />} />
         <Route path={BLOG} element={<BlogPage />} />
         <Route path={BLOG_SINGLE} element={<SingleBlogPage />} />
+        <Route path={ADMIN} element={<SanityStudio />} />
       </Routes>
     </div>
   );
