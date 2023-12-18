@@ -1,14 +1,14 @@
 import { Studio, defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
-import { postSchema, testimonialSchema } from "../schemas/sanitySchema";
-import escrowLogo from "../assets/images/logo.svg";
+import { schemaTypes } from "../sanity/schemas/index";
+import { logo } from "../assets";
 
 const StudioLogo = (props) => {
   return (
     <div className="flex items-center gap-2 ">
       <img
         alt="logo"
-        src={escrowLogo}
+        src={logo}
         width={30}
         height={30}
         className="object-cover rounded-full translate-x-3"
@@ -43,7 +43,7 @@ const SanityStudio = () => {
           projectId: "xymdbyrp",
           dataset: "production",
           schema: {
-            types: [postSchema, testimonialSchema],
+            types: schemaTypes,
           },
         })}
       />
