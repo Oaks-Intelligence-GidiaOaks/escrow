@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { BlogBanner, BlogCard, BlogPost, Footer } from "../components";
 import { useParams } from "react-router-dom";
 import { getBlogPost, getBlogPosts } from "../sanity/sanity-queries";
+import ReactGA from "react-ga";
 
 const SingleBlogPage = () => {
   const [blogPost, setBlogPost] = useState(null);
@@ -19,6 +20,10 @@ const SingleBlogPage = () => {
 
     getPostQuery();
   }, [id]);
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   return (
     <div>

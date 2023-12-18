@@ -17,6 +17,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../data/firebase";
 import ScrollEffect from "../animation/ScrollEffect";
+import ReactGA from "react-ga";
 
 const ContactPage = () => {
   const { isDarkMode } = useTheme();
@@ -90,6 +91,7 @@ const ContactPage = () => {
   };
 
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
     window.scrollTo({ top: 0 });
   }, []);
 

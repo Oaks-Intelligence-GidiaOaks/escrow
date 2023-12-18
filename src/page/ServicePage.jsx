@@ -31,10 +31,13 @@ import Container from "../components/layout/container/Container";
 import { useTheme } from "../theme/useTheme";
 import ScrollEffect from "../animation/ScrollEffect";
 import { useEffect } from "react";
+import ReactGA from "react-ga";
 
 function ServicePage() {
   const { isDarkMode } = useTheme();
+
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
     window.scrollTo({ top: 0 });
   }, []);
   return (

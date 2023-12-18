@@ -32,10 +32,12 @@ import { useTheme } from "../theme/useTheme";
 import ScrollEffect from "../animation/ScrollEffect";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import ReactGA from "react-ga";
 
 const LandingPage = () => {
   const { isDarkMode } = useTheme();
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
     window.scrollTo({ top: 0 });
   }, []);
   return (

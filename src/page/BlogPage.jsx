@@ -8,6 +8,7 @@ import { getBlogPosts } from "../sanity/sanity-queries";
 import { FiSearch } from "react-icons/fi";
 import { MdDateRange } from "react-icons/md";
 import { BiChevronDown } from "react-icons/bi";
+import ReactGA from "react-ga";
 
 const BlogPage = () => {
   const { isDarkMode } = useTheme();
@@ -40,6 +41,10 @@ const BlogPage = () => {
   useEffect(() => {
     const offset = (page - 1) * sizePerPage;
   });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   return (
     <div className="landing-page-sections">

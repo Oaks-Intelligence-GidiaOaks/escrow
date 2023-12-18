@@ -44,28 +44,49 @@ const Header = () => {
           <div className="title title-light">Escrow-Tech</div>
         </div>
         <div className="flex w-2/5 justify-between links">
-          <NavLink to="/" className="text-h">
-            Home
+          <NavLink to="/" className={`text-h`}>
+            <span style={{ color: `${isDarkMode ? "white" : "#232323"}` }}>
+              Home
+            </span>
           </NavLink>
           <NavLink to="/about" className="text-h">
-            About
+            <span style={{ color: `${isDarkMode ? "white" : "#232323"}` }}>
+              About
+            </span>
           </NavLink>
           <NavLink to="/portfolio" className="text-h">
-            Portfolio
+            <span style={{ color: `${isDarkMode ? "white" : "#232323"}` }}>
+              Portfolio
+            </span>
           </NavLink>
           <NavLink to="/services" className="text-h">
-            Services
+            <span style={{ color: `${isDarkMode ? "white" : "#232323"}` }}>
+              Services
+            </span>
           </NavLink>
           <NavLink to="/contact" className="text-h">
-            Contact
+            <span style={{ color: `${isDarkMode ? "white" : "#232323"}` }}>
+              Contact
+            </span>
           </NavLink>
           <NavLink to="/blog" className="text-h">
-            Blog
+            <span style={{ color: `${isDarkMode ? "white" : "#232323"}` }}>
+              Blog
+            </span>
           </NavLink>
         </div>
 
         <div className="btn" onClick={toggleTheme}>
-          <img src={isDarkMode ? sun : moon} alt="" className="btn_img" />
+          <img
+            src={isDarkMode ? sun : moon}
+            alt=""
+            className="btn_img"
+            style={{
+              filter: isDarkMode
+                ? "brightness(0%) invert(80%)"
+                : "brightness(130%) invert(100%)",
+            }}
+          />
           <div className="btn_text">{isDarkMode ? "Light" : "Dark"}</div>
         </div>
         <div className="hiddenn" ref={ref}>

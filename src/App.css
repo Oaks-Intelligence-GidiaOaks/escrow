@@ -797,7 +797,7 @@ html {
 
 .landing-page-sections {
   background: var(--landing-page-sections-bg);
-  width: 100vw !important;
+  width: 100% !important;
 }
 
 .landing-page-products {

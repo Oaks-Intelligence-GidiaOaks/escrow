@@ -7,7 +7,7 @@ export default defineConfig({
   name: "default",
   title: "sanity-stellarSat",
 
-  projectId: "uismb98i",
+  projectId: "xymdbyrp",
   dataset: "production",
 
   plugins: [deskTool(), visionTool()],
