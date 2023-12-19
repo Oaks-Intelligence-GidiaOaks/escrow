@@ -13,10 +13,6 @@ import BigCardPost from "../components/premitives/blog-card/BlogCard";
 
 const BlogPage = () => {
   const { isDarkMode } = useTheme();
-  // const [blogPosts, setBlogPosts] = useState(null);
-  const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
-  const [sizePerPage, setSizePerPage] = useState(9);
 
   const [blogPosts, setBlogPosts] = useState(null);
   const [skip, setSkip] = useState(0);
@@ -75,7 +71,8 @@ const BlogPage = () => {
           <div className="container mx-auto">
             <div className="flex flex-col gap-3">
               <p className="text-sm text-hero">
-                Showing 1-4 of {total} results
+                Showing {`${skip}`}-{blogPosts?.results.length} of {totalCount}{" "}
+                results
               </p>
               <div className="flex gap-3 flex-wrap items-center">
                 <Input
