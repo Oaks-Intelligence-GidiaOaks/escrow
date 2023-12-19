@@ -9,38 +9,55 @@ import { FiSearch } from "react-icons/fi";
 import { MdDateRange } from "react-icons/md";
 import { BiChevronDown } from "react-icons/bi";
 import ReactGA from "react-ga";
+import BigCardPost from "../components/premitives/blog-card/BlogCard";
 
 const BlogPage = () => {
   const { isDarkMode } = useTheme();
-  const [blogPosts, setBlogPosts] = useState(null);
+  // const [blogPosts, setBlogPosts] = useState(null);
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
   const [sizePerPage, setSizePerPage] = useState(9);
 
+  const [blogPosts, setBlogPosts] = useState(null);
+  const [skip, setSkip] = useState(0);
+  let pageSize = 9;
+
+  let totalCount = blogPosts?.totalCount;
+
+  // mine
   useEffect(() => {
-    const getPosts = async () => {
-      const data = await getBlogPosts();
-      console.log(data);
+    const getPostsQuery = async () => {
+      const data = await getBlogPosts(skip, pageSize);
       setBlogPosts(data);
-      setTotal(data?.length);
+      console.log(data);
     };
 
-    getPosts();
-  }, []);
+    getPostsQuery();
+  }, [skip, pageSize]);
 
+  let prevCondition = skip >= pageSize;
+  let nextCondition = skip < totalCount && pageSize + skip <= totalCount;
+
+  // mine
   const searchPost = async (str) => {
     try {
-      const data = await getBlogPosts(str);
-      console.log(data);
+      const data = await getBlogPosts(skip, pageSize, str);
       setBlogPosts(data);
     } catch (err) {
       console.error(err);
     }
   };
 
-  useEffect(() => {
-    const offset = (page - 1) * sizePerPage;
-  });
+  // mine
+  const handlePagination = (direction) => {
+    if (direction === "prev" && prevCondition) {
+      setSkip(skip - pageSize);
+    } else if (direction === "next" && nextCondition) {
+      setSkip(skip + pageSize);
+    } else {
+      return null;
+    }
+  };
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
@@ -68,30 +85,40 @@ const BlogPage = () => {
                   onChange={searchPost}
                   setBlogPosts={setBlogPosts}
                 />
-                {/* <DateInput Icon={MdDateRange} />
-
-                <div className="flex-1" />
-                <Input
-                  Icon={BiChevronDown}
-                  type="dropdown"
-                  placeholderText="Categories"
-                /> */}
-                {/* <CustomInput
-              Icon={BiChevronDown}
-              type="dropdown"
-              placeholderText="Author"
-            /> */}
-                {/* <Input
-                  Icon={BiChevronDown}
-                  type="dropdown"
-                  placeholderText="Tags"
-                /> */}
               </div>
 
               <div className="py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense">
-                {blogPosts?.map((post) => {
-                  return <BlogCard key={post._id} data={post} />;
+                {blogPosts?.results?.map((post, index) => {
+                  return (
+                    <BigCardPost key={post._id} data={post} img={post.image} />
+                    // <p>gggg</p>
+                  );
                 })}
+              </div>
+
+              <div className="mt-6 flex items-center gap-8 justify-center ">
+                <button
+                  disabled={!prevCondition}
+                  className={`p-2 px-6 border ${
+                    !prevCondition &&
+                    "cursor-not-allowed border-gray-600 text-gray-600"
+                  } rounded`}
+                  onClick={() => handlePagination("prev")}
+                >
+                  Prev
+                </button>
+
+                <button
+                  className={`p-2 
+             ${
+               !nextCondition &&
+               "cursor-not-allowed border-gray-600 text-gray-600"
+             }
+              px-6 border  rounded`}
+                  onClick={() => handlePagination("next")}
+                >
+                  Next
+                </button>
               </div>
             </div>
           </div>
