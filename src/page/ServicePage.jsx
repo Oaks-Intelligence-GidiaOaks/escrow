@@ -31,7 +31,7 @@ import Container from "../components/layout/container/Container";
 import { useTheme } from "../theme/useTheme";
 import ScrollEffect from "../animation/ScrollEffect";
 import { useEffect } from "react";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 function ServicePage() {
   const { isDarkMode } = useTheme();

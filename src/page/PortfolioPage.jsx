@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { PortfolioBlock } from "../blocks";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const PortfolioPage = () => {
   useEffect(() => {

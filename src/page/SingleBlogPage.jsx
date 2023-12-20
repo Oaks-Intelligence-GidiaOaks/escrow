@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BlogBanner, BlogCard, BlogPost, Footer } from "../components";
 import { useParams } from "react-router-dom";
 import { getBlogPost, getBlogPosts } from "../sanity/sanity-queries";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const SingleBlogPage = () => {
   const [blogPost, setBlogPost] = useState(null);
