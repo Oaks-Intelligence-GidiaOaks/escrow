@@ -16,12 +16,16 @@ import { Hero } from "../components";
 import Container from "../components/layout/container/Container";
 import { useTheme } from "../theme/useTheme";
 import ScrollEffect from "../animation/ScrollEffect";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const AboutPage = () => {
   const { isDarkMode } = useTheme();
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+      title: "About Page",
+    });
     window.scrollTo({ top: 0 });
   }, []);
 

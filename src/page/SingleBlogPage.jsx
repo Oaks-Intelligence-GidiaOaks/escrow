@@ -22,7 +22,15 @@ const SingleBlogPage = () => {
   }, [id]);
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+      title: `${
+        window.location.pathname.split("/")[
+          window.location.pathname.split("/").length - 1
+        ]
+      } Page`,
+    });
   }, []);
 
   return (

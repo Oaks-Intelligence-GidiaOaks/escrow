@@ -37,7 +37,11 @@ function ServicePage() {
   const { isDarkMode } = useTheme();
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+      title: "Service Page",
+    });
     window.scrollTo({ top: 0 });
   }, []);
   return (

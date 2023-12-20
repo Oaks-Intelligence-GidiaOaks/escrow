@@ -4,7 +4,11 @@ import ReactGA from "react-ga";
 
 const PortfolioPage = () => {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+      title: "Portfolio Page",
+    });
   }, []);
 
   return (

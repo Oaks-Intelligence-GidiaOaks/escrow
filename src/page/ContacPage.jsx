@@ -17,7 +17,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../data/firebase";
 import ScrollEffect from "../animation/ScrollEffect";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const ContactPage = () => {
   const { isDarkMode } = useTheme();
@@ -91,7 +91,11 @@ const ContactPage = () => {
   };
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+      title: "Contact Page",
+    });
     window.scrollTo({ top: 0 });
   }, []);
 
@@ -133,7 +137,7 @@ const ContactPage = () => {
                     // data-aos="fade-right"
                     // data-aos-duration="1000"
                   >
-                    We are easily reachable through our contact form or emails
+                    We are easily reachable through our contact form or email
                   </p>
                   <form
                     onSubmit={handleSubmit}

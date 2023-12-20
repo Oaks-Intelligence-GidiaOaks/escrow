@@ -8,7 +8,7 @@ import { getBlogPosts } from "../sanity/sanity-queries";
 import { FiSearch } from "react-icons/fi";
 import { MdDateRange } from "react-icons/md";
 import { BiChevronDown } from "react-icons/bi";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 import BigCardPost from "../components/premitives/blog-card/BlogCard";
 
 const BlogPage = () => {
@@ -56,7 +56,11 @@ const BlogPage = () => {
   };
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+      title: "Blog Page",
+    });
   }, []);
 
   return (
