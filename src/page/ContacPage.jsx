@@ -133,7 +133,7 @@ const ContactPage = () => {
                     // data-aos="fade-right"
                     // data-aos-duration="1000"
                   >
-                    We are easily reachable through our contact form or email
+                    We are easily reachable through our contact form or emails
                   </p>
                   <form
                     onSubmit={handleSubmit}
