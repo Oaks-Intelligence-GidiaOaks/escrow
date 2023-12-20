@@ -7,20 +7,41 @@ const clientConfig = {
   useCdn: false,
 };
 
-export const getBlogPosts = async (searchTitle, page = 1, pageSize = 9) => {
+// export const getBlogPosts = async (searchTitle, page = 1, pageSize = 9) => {
+//   const client = createClient(clientConfig);
+
+//   let query = `*[_type=="post"] | order(_createdAt)`;
+
+//   if (searchTitle) {
+//     query = `*[_type=="post" && title match "${searchTitle}"] | order(_createdAt)`;
+//   }
+
+//   const offset = (page - 1) * pageSize;
+
+//   query += `[${offset}..${offset + pageSize - 1}]`;
+
+//   return client.fetch(`${query} {
+//     _id,
+//     title,
+//     content,
+//     "image": image.asset->url,
+//     "slug": slug.current,
+//     tag,
+//     _createdAt,
+//     author,
+//     "authorImg": authorImg.asset->url,
+//     position,
+//   }`);
+// };
+
+// mine
+export const getBlogPosts = async (skip, pageSize) => {
   const client = createClient(clientConfig);
 
-  let query = `*[_type=="post"] | order(_createdAt)`;
-
-  if (searchTitle) {
-    query = `*[_type=="post" && title match "${searchTitle}"] | order(_createdAt)`;
-  }
-
-  const offset = (page - 1) * pageSize;
-
-  query += `[${offset}..${offset + pageSize - 1}]`;
-
-  return client.fetch(`${query} {
+  const query = `{
+    "results": *[_type=="post"] [${skip}...${
+    skip + pageSize
+  }] | order(_createdAt) {
     _id,
     title,
     content,
@@ -31,13 +52,24 @@ export const getBlogPosts = async (searchTitle, page = 1, pageSize = 9) => {
     author,
     "authorImg": authorImg.asset->url,
     position,
-  }`);
+  },
+  "totalCount": count(*[_type =="post"])
+}`;
+
+  return client.fetch(query);
+};
+
+// mine
+export const searchBlogPosts = async (searchTerm) => {
+  const query = `
+  {"results": *[_type=="post" && title match "${searchTerm}"] | order(_createdAt),
+  "totalCount": count(*[_type =="post" && title match "${searchTerm}"])
+}`;
+  return client.fetch(query);
 };
 
 export const getBlogPost = async (slug) => {
   const client = createClient(clientConfig);
-
-  console.log("slug", slug);
 
   const query = `*[_type=="post" && slug.current == $slug ] [0] {
     _id,

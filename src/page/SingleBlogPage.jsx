@@ -12,10 +12,10 @@ const SingleBlogPage = () => {
   useEffect(() => {
     const getPostQuery = async () => {
       const data = await getBlogPost(id);
-      const ddata = await getBlogPosts();
+      const ddata = await getBlogPosts(0, 4);
 
       setBlogPost(data);
-      setBlogPosts(ddata);
+      setBlogPosts(ddata.results);
     };
 
     getPostQuery();
