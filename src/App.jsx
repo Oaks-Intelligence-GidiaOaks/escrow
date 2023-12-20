@@ -6,6 +6,8 @@ import ReactGA from "react-ga4";
 const MEASUREMENT_ID = "G-LJPRLX47EX";
 ReactGA.initialize(MEASUREMENT_ID);
 
+ReactGA.send({ hitType: "pageview", page: document.location.pathname });
+
 function App() {
   return (
     <>
