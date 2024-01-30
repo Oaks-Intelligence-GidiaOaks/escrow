@@ -12,6 +12,7 @@ import Container from "../container/Container";
 import { useTheme } from "../../../theme/useTheme";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   const { isDarkMode } = useTheme();
 
   return (
@@ -102,9 +103,17 @@ function Footer() {
                 className="px-3 link"
               />
             </div>
-            <div className="copyright">©2023 Escrow-Tech Limited</div>
+            <div className="copyright hidden sm:block whitespace-nowrap">
+              {" "}
+              Copyright © {currentYear} Escrow-Tech Limited. All Rights
+              Reserved.
+            </div>
           </div>
         </Container>
+        <div className="copyright flex flex-col items-center justify-center sm:hidden">
+          <span>Copyright © {currentYear} Escrow-Tech Limited.</span>
+          <span>All Rights Reserved.</span>
+        </div>
       </section>
     </>
   );
