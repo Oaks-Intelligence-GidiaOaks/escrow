@@ -10,6 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import Container from "../container/Container";
 import { useTheme } from "../../../theme/useTheme";
+import { PRIVACY_POLICY, TOS } from "../../../routes/CONSTANT";
 
 function Footer() {
   const { isDarkMode } = useTheme();
@@ -41,13 +42,14 @@ function Footer() {
                 About Us
               </Link>
               <br />
-              <Link to="#" className="footer-links pb-1">
+              <Link to={TOS} className="footer-links pb-1">
                 Terms of Service
               </Link>
               <br />
-              <Link to="#" className="footer-links pb-1">
+
+              <p to={PRIVACY_POLICY} className="footer-links pb-1">
                 Privacy Policy
-              </Link>
+              </p>
               {/* <br /> */}
               {/* <Link to="#" className="footer-links pb-1">
                 Careers
@@ -114,7 +116,6 @@ function Footer() {
           <span>Copyright © {currentYear} Escrow-Tech Limited.</span>
           <span>All Rights Reserved.</span>
         </div>
-        
       </section>
     </>
   );
