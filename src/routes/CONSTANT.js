@@ -6,3 +6,5 @@ export const PORTFOLIO = "/portfolio";
 export const ADMIN = "/admin";
 export const BLOG = "/blog";
 export const BLOG_SINGLE = "/blog/:id";
+export const TOS = "/terms-of-service";
+export const PRIVACY_POLICY = "/privacy-policy";

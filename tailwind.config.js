@@ -2,7 +2,13 @@
 export default {
   purge: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        raleway: ["Raleway", "sans-serif"],
+        worksans: ["Work Sans", "sans-serif"],
+        jakartasans: ["Plus Jakarta Sans", "sans-serif"],
+      },
+    },
     screens: {
       sm: "468px",
       md: "768px",
