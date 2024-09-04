@@ -1,0 +1,5 @@
+{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "escrow-tech.co.uk",
+  "Id": "0aa03a87-b985-4c48-b64e-b2ab9ee7acb1"
+}
