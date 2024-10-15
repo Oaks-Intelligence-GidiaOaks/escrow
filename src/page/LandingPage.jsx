@@ -331,8 +331,8 @@ const LandingPage = () => {
                         Stable Products You Can Trust
                       </p>
                       <p className="browse-col-text pb-5">
-                        Gonsectetur eque nec nunc facilisis tellus tincidunt.
-                        Malesuada maecenas ac bibendum consectetur.
+                        Discover a stable software solution designed for
+                        reliability and performance. Built to meet your needs.
                       </p>
                       <div className="flex justify-center items-center">
                         <div className="browse-box">
@@ -359,8 +359,9 @@ const LandingPage = () => {
                         Fulfill Your Corporate Responsibility
                       </p>
                       <p className="browse-col-text pb-5">
-                        Honsectetur eque nec nunc facilisis tellus tincidunt.
-                        Malesuada maecenas ac bibendum consectetur.
+                        Empower your business to fulfil its corporate
+                        responsibility with innovative software solutions that
+                        drive sustainability and social impact.
                       </p>
                       <div className="flex justify-center items-center">
                         <img
