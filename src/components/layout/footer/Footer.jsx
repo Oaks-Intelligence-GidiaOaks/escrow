@@ -116,6 +116,44 @@ function Footer() {
           <span>Copyright © {currentYear} Escrow-Tech Limited.</span>
           <span>All Rights Reserved.</span>
         </div>
+
+        <div
+          className={`container mx-auto space-y-4 pb-10 px-[4vw] max-w-[1440px] ${
+            !isDarkMode && "text-black"
+          }`}
+        >
+          <p className="">
+            Escrow-Tech Limited. Registered Office: Castlemead, Lower castle
+            Street, Bristol, BS1 3AG, United Kingdom. Registered Number
+            12308672. Registered in England and Wales.
+            <span className="px-2 underline text-[#0260A2]">
+              <a target="__blank" href="https://www.escrow-tech.co.uk">
+                www.escrow-tech.co.uk{" "}
+              </a>
+            </span>
+            Authorised and regulated by the Financial Conduct Authority (FCA).
+            Our Firm Reference Number is 1019810. You can check this on the
+            Financial Services Register by visiting the FCA’s website
+            <span className="px-2 underline text-[#0260A2]">
+              <a target="__blank" href="https://www.fca.org.uk/register">
+                www.fca.org.uk/register.
+              </a>
+            </span>
+          </p>
+
+          <p className="">
+            Escrow-Tech Limited is a credit broker and not a lender. Credit is
+            subject to status. Escrow-Tech Limited receives commission for
+            introductions made relating to consumer credit. Escrow-Tech Limited
+            does not provide financial advice. Please contact
+            <span className="px-2 underline text-[#0260A2]">
+              <a target="__blank" href="https://www.moneyhelper.org.uk">
+                www.moneyhelper.org.uk
+              </a>
+            </span>
+            or a financial advisor if you need financial advice.
+          </p>
+        </div>
       </section>
     </>
   );
