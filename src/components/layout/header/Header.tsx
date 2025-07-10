@@ -41,7 +41,12 @@ const Header = () => {
       <div className="flex justify-between items-center w-full pb-8">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="logo" />
-          <div className="title title-light">Escrow-Tech</div>
+         <div className="flex flex-col ml-2">
+            <div className="title title-light">Escrow-Tech</div>
+            <div className="title title-light" style={{ fontSize: "18px" }}>
+              UK & NI
+            </div>
+          </div>
         </div>
         <div className="flex w-2/5 justify-between links">
           <NavLink to="/" className={`text-h`}>
